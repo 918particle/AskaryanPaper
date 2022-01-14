@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+
+\begin{document}
+Report of Referee A, DF12830/Hanson, September 12, 2021  \\ \vspace{0.25cm}
+\hrulefill
+
+The manuscript derives a fully analytic model of Askaryan radiation in
+ice in the time domain. This manuscript will make an excellent
+addition to the literature on modeling Askaryan signals in ice after
+some revisions are made. I have five larger comments and then several
+more minor ones.
+
+\begin{enumerate}
+\item Section V: Off-cone field equations is very hard to follow in part
+because the derivation starts from an assumed form for
+$\mathcal{\vec{E}}$ (line 4 in Table III) that is not presented earlier
+in the paper, but also because there are several changes of variables
+including reusing x, u and swapping their order. \\ \\
+\textit{We now provide one appendix for the on-cone derivation, and one appendix for the off-cone derivation.  We tried to discern what details were important enough to keep in the main body of the text.  For the on-cone case, we felt that stating the problem, then introducing the inverse Fourier transform were important enough to keep in the main body.  For the inverse Fourier transform, we chose to explain the nature of the poles, and the two cases of the sign of retarded time in words in the main body.  We still conclude with the verification of the uncertainty principle for the on-cone case.  The rest of the details are now in Appendix B, along with the full definition of $\mathcal{E}$.  For the off-cone case, we re-introduce the main field equation, but rely on the Appendix A for the full specification of $\vec{\mathcal{E}}$.  We start the expansion and explain in words how to reach the line-broadening function (related to the Voigt function).  From there, we explain in words the \textit{symmetric approximation}, but relegate the details to Appendix C.  We then quote the result and verify the uncertainty principle.  Appendix B contains enough detail for the skeptical reader to follow the reasoning from start to finish.  Of course, we welcome any further suggestions from the reviewer.  We went a step further and included the form factor details in Appendix A as well.}
+\item The comparison between NuRadioMC and the analytic model using digitized waveforms should be improved. There are several discussions of artifacts found in the analysis that would be eliminated if the authors just asked the waveforms directly from the authors of Ref. [23] or running NuRadioMC for example cases themselves. \\ \\
+\textit{Our response to this general comment is why we have taken so long to respond.  We thank the reviewer for patience and understanding.  We decided to install and learn NuRadioMC tools, and to create scripts that produced output fields.  Further, since the goal was to compare MC truth values from NuRadioMC to values derived from field equations, we had to modify NuRadioMC to pass derived quantities like the longitudinal width parameter, $a$.  We began this effort right at the end of the summer during preparations for the Fall 2021 semester.  We are happy to report several major improvements to the waveform comparison analysis.  We chose to stay with a small number of explicit waveforms, hoping to keep the analysis repeatable for another user.  We find that the electromagnetic and hadronic on-cone waveforms from NuRadioMC (ARZ 2020 model) strongly agree with our on-cone formula.  In particular, the higher energy hadronic waveforms showed improvement in correlation coefficient and fractional power difference.  Further, electromagnetic fits to on-cone waveforms seem to produce agreement between the waveform $a$-value and the $a$-value from NuRadioMC.  The $a$-value agreement is not as good for the hadronic case, but still at the 10-50\% level.  As for the off-cone cases, both the electromagnetic and hadronic waveforms imporved in their correlation and power match with respect to NuRadioMC ARZ2020.  We find the correct viewing angle in all cases, and we even show that if we know $\theta$ in advance, the correlation between $a$-values from NuRadioMC and the waveforms is 97 percent.  This suggests an energy reconstruction that is robust to changes in comparison waveforms.  Finally, we find that our $\epsilon$ parameter appears to be greater than 1 for on-cone electromagnetic (10 PeV) events, while it is less than 1 for hadronic (100 PeV) events.  This is intriguing and requires further study.  We also highlight in several places where we intend to perform large-scale statistical analysis of our analytic model parameters in comparison to semi-analytic parameterizations.  We hope these improvements satisfy the reviewer's concerns.}
+\item Given that the manuscript derives on- and off-cone equations, it seems appropriate to consider the limit of the off-cone equations as they approach $\theta_C$. What are the boundaries between using the on- and off-cone equations? \\ \\
+\textit{We now provide further clarification surrounding the symmetric approximation, and connect that idea to a new subsection, VB.  Section VB is entitled Usage of the On-Cone versus Off-Cone Fields.  We note that taking the limit $\theta \to \theta_{\rm C}$ means $p \to 0$, and that the pulse amplitude (and therefore power) goes to zero for the off-cone case.  At first, it seems like the amplitude should diverge, but the pulse width goes to zero.  Conversely, as pulse width increases, amplitude decreases.  If one tries to make the amplitude of the off-cone model similar to the on-cone model, this fails because the pulse width goes to zero.  Observed power should be maximized at $\theta = \theta_{\rm C}$, and decrease with increasing $\Delta\theta$.  Thus, the pulse width of the off-cone field should be greater than or equal to the on-cone pulse width.  We do not prove that this is the only requirement one can impose, but it yields a physical result in the form of an equation for $\Delta\theta_{\rm min}$.  We also estimate the minimum appropriate angle to evaluate the off-cone field to be 1 degree off-cone. We hope this argument makes sense, and welcome any suggestions from the reviewer.}
+\item This is really a stylistic comment, but it strikes me that several
+aspects of the derivations are too detailed and could be removed or
+moved into an appendix. I recommend the later to keep the main body of
+the text shorter, while maintaining the authors’ preference for
+presenting the complete derivation (which I appreciate). The advantage
+of a shorter main text is that the primary results can come through
+more cleanly. But again this is a style comment and I leave it to the
+authors what their preference is. This could perhaps help with comment
+\#1. \\ \\
+\textit{We hope our changes discussed in response to main comment \#1 address this point as well.  We have added two appendices that contain all the details not in the main body.  We are always open to further suggestions.}
+\item This treatment is valid under the assumption that $\eta < 1$, which
+is mentioned at the beginning of the manuscript and used in the
+derivation. The conclusions and summary should discuss the
+implications of this assumption or whether there will be followup work
+for $\eta > 1$. \\ \\
+\textit{We have provided a paragraph at the end of Sec. VII A that describes the limitations imposed by requiring $\eta < 1$.  First, we review the several reasons $\eta < 1$ was necessary for the calculations.  Second, we estimate the minimum observer distance given $\eta = 1$ for typical parameters within $\eta$.  We find that the restriction is a mild one.  According to NuRadioMC, most UHE-$\nu$ Askaryan signals arrive from distances greater than the result implied by $\eta \leq 1$.  Third, we describe how future work will test the limits of $\eta > 1$.  Since this work already reveals a potential energy reconstruction, we must embark on a study to develop the probability distributions of parameters like $a$, $\omega_{\rm C}$, and $\omega_{\rm 0}$ when our model is forced to match the other models in NuRadioMC.  In these statistical comparisons it will be straightforward to determine in parallel how necessary it is to assume $\eta < 1$.  If the reviewer has any insight for future directions, we'd be happy to consider those as well.}
+\end{enumerate}
+
+Minor Comments by page:
+\begin{itemize}
+\item Page 1: Abstract: ``a simulation being used to design IceCube-Gen2” $\rightarrow$ ``a
+simulation being used to design the radio component of IceCube-Gen2'' \\ \\
+\textit{We adopted this change (see abstract).}
+\item Page 1, Para 2: Clarify that the charge that radiates is the summed charge of the shower \\ \\
+\textit{We adopted this change (see paragraph 2, page 1) by adding ``the net charge in the cascade''}
+\item Page 1, Para 2: The discussion of the flux constraints strikes me as out of place. I recommend making a new paragraph prior to this one that describes the flux constraints across the energy band of interest to the radio component of Gen2.  Furthermore, why not use the IceCube and/or Auger constraints here which are more constraining than ANITA at EeV energies? Or perhaps add them together. \\ \\
+\textit{We adopted this change, in that we introduce the IceCube EHE differential limit.  Instead of creating a new paragraph, we decided to allow the reasoning to ``flow down'' from the Askaryan effect, to the low UHE-$\nu$ flux, to the conclusion that large in situ detectors are being developed.}
+\item Page 1, Para 4: What can be approximated as a Gaussian? The radiation or Xmax? \\ \\
+\textit{Technically we meant the charge excess in the cascade.  We deemed this phrasing unnecessary, so we decided to cut it since it was confusing (see current paragraph 3).}
+\item Page 2, Last Para Section I: Seems odd to compare waveforms to ``NuRadioMC'' rather than to the ZHS or ARVS models. In principle, the authors are using NuRadioMC but the comparison is to the specific semi-analytical model used in Ref. 23. \\ \\
+\textit{We adopted this by changing ``by NuRadioMC'' to ``by the semi-analytic parameterizations in NuRadioMC.''}
+\item Section II Para 1: ``index value'' $\rightarrow$ ``refractive index for solid ice'' \\ \\
+\textit{We adopted this change verbatim.}
+\item Page 4: Typo in this line (subject / verb agreement): ``As presented in Section II the form factor for the cascade ICD be the 3D Fourier transform of $f(z', \vec{\rho}')$.'' \\ \\
+\textit{This is now fixed.}
+\item Eqns 8-11 could be written more succinctly by just saying in words that the normalization factors are chosen such that integrating the form factor integrating over a sphere is normalized to 1. \\ \\
+\textit{We adopted this change.  We now write in words that $f$ is normalized to 1.}
+\item Notation is inconsistent in the format of the vector in the dot product ( $\vec{q} \cdot \vec{x’}$) going from Eqn (12) to (13). (Eqn 12 has arrows over the vectors while Eqn 13 typesets the vectors in bold.) \\ \\
+\textit{This is now fixed.}
+\item Paragraph between Eqns (15) and (16): Isn’t $\gamma$ the exponential scale factor of the ICD rather than the slope? \\ \\
+\textit{We adotped the change.  Sometimes we use slope and scale factor interchangeably.  It now reads exponential scale factor.}
+\item Page 5: Eqns 24 through 27 seem unnecessary. I could imagine that you could skip directly to Eqn (28) or move several aspects of these derivations into an appendix. But I suppose this is somewhat of a stylistic choice. \\ \\
+\textit{We extra-adopted this one by creating Appendix A for the form factor.  We felt quoting the integral tables will give future readers the ability to check for themselves.}
+\item Fig. 2: I recommend adding the original ZHS parameterization to this plot for comparison. \\ \\
+\textit{If we adopted this edit, the ZHS curve would lie right on top of the gray curve of Fig. 2.  That is the reason we have (what is now) Eq. 11 (Eq. 31 in the first draft).  We did, however, discover a bug in the plotting script that creates Fig. 2.  The curves are now more aligned, as they should be.}
+\item Page 6: Eqn (49) I would revise so that the sqrt is over the entire equation, but this is a style choice. It also also might be useful to point out that since $f(x)$ is a normalized function $<1$, $\ln(f)$ will always be negative and $a$ is real valued. \\ \\
+\textit{We revised the format to keep the $\sqrt{\ln(x)}$ energy dependence by itself, but used the same symbol for both roots.  We added a sentence reminding the reader that $a$ will be real-valued.}
+\item Page 7: Eqns (60) and (61) The approximations are valid if the approximations are valid if $\omega << \omega_C$ and $\omega << \omega_{CF}$ rather than only less than. \\ \\
+\textit{Note that these formulas are now in Appendix B.  We chose to keep the language ``such that the following approximations of the factors in the denominator are valid.'' For example, the reader can see from Fig. 2 how close to 1 the parameter $\sigma$ can be.}
+\item Page 8: For clarity, I recommend introducing the fact that you will change to the time domain between (63) and (64) \\ \\
+\textit{We adopted this change by adding ``...converts the field to the time domain.''}
+\item Page 10, Fig. 3: The differences in the curves are hard to discern, particularly at the peaks and the top and bottom curves are almost indistinguishable. Perhaps use different colors or grey scales? Or offset them in time? Explain why you chose these parameters as examples either in the text or in the caption. \\ \\ 
+\textit{We adopted this edit by altering Figure 3 in the following ways: we now use gray scale for three cases, changed the normalization, explain in the text that the values are motivated by fit comparisons in Sec. 6, and the two plots are the same data.  The second plot is a zoomed in version of the first.  The data in the graphs are normalized to the black curve peak.}
+\item Page 10: First paragraph: Is $\omega_C$ missing an n? \\ \\
+\textit{Normally, yes, equations should have $n$'s.  In this work, in the units and vocabulary section, we state that we take things like $k$ and $c$ to be the wavenumber and speed ``in the medium.''  In this case, the $n$'s would just cancel, so we chose to leave it as is.}
+\item Section V: 2nd paragraph: Where is $\mathcal{\vec{E}}( \omega, \theta)$ defined? If it's already derived in a reference, please cite it. \\ \\
+\textit{Fixed: the full version of $\mathcal{E}$ is given in Appendix B.}
+\item Eqn 85 and subsequent eqns in Section V: The equations are being evaluated at $u=1$, but $x \rightarrow 1$ in the argument of $\mathcal{\dot{E}}(u,x)$ rather than $u$. I would expect it to be written $\mathcal{\dot{E}}(u,1)$. \\ \\
+\textit{Fixed.  The equations are now in Appendix B.}
+\item Page 12, Para 1: Several variable (e.g. x) are reused multiple times in this manuscript. \\ \\
+\textit{What's funny is if you recite the alphabet, we have used almost every letter at some point in the paper.  We might as well stay with x for the ratio of cascade energy to critical energy.  We think given the tables of definitions, it's clear what we mean in the different cases.}
+\item Page 12, Para 1: Voigt function $\rightarrow$ Voigt function, $U(x,s)$. (I assume.) \\ \\
+\textit{We adopted this change, though we recast it as the line-broadening function (the relevant case of the Voigt function).  We write ``the line-broadening function, H...'' and then use H subsequently.}
+\item Page 13, Section VI: Para 1: While NuRadioMC includes semi-analytic models, they are all based on other work (eg. ZHS, AVRZ, etc) so you might as well cite the specific model that they used in Ref. 23 rather than the wrapper class. \\ \\
+\textit{We adopted this change.  We cite the most recent ARZ result, as the waveforms are compared to that semi-analytic model using NuRadioMC.}
+\item Eqn (108): $(\Delta f)^2$ seems to be a poor choice of variable name since it has units of power, but other variables in the fit are named ``f'' and represent frequencies. \\ \\
+\textit{Fixed: we can change to capital E to avoid confusion, as in $(\Delta E)^2$}
+\item Pages 13-19, Figs 6-9: The white space around the waveforms is too large and the black curve hides the peak of the gray curve. I suspect that some differences are hidden to the reader. \\ \\ 
+\textit{We decided to zoom in for the x-axis to reduce whitespace.  For the y-axis, it's not that differences are being hidden, it's that the theoretical fit is minimizing $(\Delta E)^2$ and maximizing $\rho$.  Thus, the waveforms should lie on top of each other as much as possible.}
+\item Tabs V-VI, IX: Where appropriate please add the Monte Carlo truth to these tables. I also don’t understand why ``PeV'' is listed in bold. \\ \\
+\textit{We adopted this change by changing PeV to regular face instead of bold, and adding the new MC truth values for $a$ and $\theta$ to these tables when possible.}
+\item Tab VII, IX: The description of the columns in the caption and the columns in the table are not consistent. \\ \\
+\textit{Fixed, the captions are now consistent with the columns for the off-cone tables.}
+\item Tab VIII: Why is waveform \#1 missing from this table? \\ \\
+\textit{Fixed.  One waveform in the NuRadioMC paper for that EM energy is cut off visually, so we could not digitize it completely.  We wanted others to be able to repeat our analysis, so we digitized from the paper.  Now that we have transitioned to generating NuRadioMC waveforms, this is no longer an issue.}
+\item Page 20, Section VII, Last Para: I agree that the potential for reconstruction is really intriguing. I would add a comment that this could be comprised of a study using the full statistical comparisons to the semi-analytical models. \\ \\
+\textit{We adopted this change by adding a sentence that future work will build the probability distributions of parametes like $a$ and the cutoff frequencies.  The hope is to have an energy reconstruction independent of waveform normalization (in the y-axis).}
+\end{itemize}
+
+\end{document}
