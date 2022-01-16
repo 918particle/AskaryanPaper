@@ -1,0 +1,300 @@
+CAUTION External Sender: This email originated from outside of the organization. Do not click links or open attachments unless you recognize the sender and know the content is safe.
+
+
+Re: DF12830
+    Complex analysis of Askaryan radiation: A fully analytic model in the
+    time domain
+    by Jordan C. Hanson and Raymond Hartig
+
+Dear Dr. Hanson,
+
+The above manuscript has been reviewed by two of our referees. In
+addition to the Referee A, we consulted a new referee (Referee B) on
+the suggestion of Referee A. Comments from the reports appear below.
+
+The comments of Referee B suggest that considerable revision of your
+paper may be in order. If you resubmit your manuscript, please include
+a summary of the changes made and a brief response to all
+recommendations or criticisms.
+
+Yours sincerely,
+
+Ansar Fayyazuddin, Ph.D. (he/him/his)
+Associate Editor
+Physical Review D
+Email: prd@aps.org
+https://journals.aps.org/prd/
+Follow us on Twitter @PhysRevD
+
+NEWS FROM THE PHYSICAL REVIEW JOURNALS
+
+Sign up for PRX Energy email alerts
+https://go.aps.org/3wvDYbB
+
+Promoting Inclusive and Respectful Communications
+https://go.aps.org/2TUnDQz
+
+Physical Review Journal Metrics updated with 2020 JCR stats
+https://go.aps.org/3e2aLyu
+
+----------------------------------------------------------------------
+Second Report of Referee A -- DF12830/Hanson
+----------------------------------------------------------------------
+
+The authors have adequately addressed my concerns and I can see the
+paper is significantly improved with the reorganization and updates to
+the simulations. My only comment is the the signals in Fig. 6 (right
+panels) are clipped and the authors should consider expanding the
+y-axis.
+
+----------------------------------------------------------------------
+Report of Referee B -- DF12830/Hanson
+----------------------------------------------------------------------
+
+General discussion about suitability of the addressed topic:
+
+This article is difficult to evaluate because it appears to be a
+thorough analytical calculation of radio pulses in ice in the time
+domain which seems to put in perspective and build from a couple of
+earlier articles on this topic, namely references [20] (involving one
+of the authors) and the original one [31] on the same subject (from
+2001), and it provides expressions for the pulses in terms of
+parameters that relate to the geometry and to physical scales such as
+the longitudinal and lateral spread of the shower. In its second part
+the article seems to validate these results by a detailed comparison
+with an alternative calculation based on ref [19], which is used to
+fit the pulses to those obtained in the alternative approach and to
+get the best fit parameters. As such it could be both classified as a
+theoretical paper on the mathematical modelling of radio pulses in ice
+and also as a phenomenological article in which a given analytic
+parameterization is compared to a more precise calculation. However as
+one one gets down to the details and compares the results with those
+of earlier publications, the article starts rising many doubts, in
+particular about what is really new in the theoretical calculation
+presented, and about what are the authors actually checking when they
+compare their analytic expressions to the results obtained with
+another "semi-analytical" approximation.
+
+As a result I have been drawn into comparing the results of this paper
+to earlier work in some detail to come to a reasonable conclusion with
+respect to what is the actual reach of this paper. I have found that
+the paper has many repetitions of earlier work and that it is
+extremely difficult to say what is truly new in the analytical
+calculation. The theoretical results are basically the same as those
+presented in ref [31], only that they are now given in the time domain
+and the form factor is evaluated with simple approximations of the
+shower model, a gaussian for the depth development and an exponential
+decay for the lateral distribution. Moreover the exercise of
+converting the frequency domain to the time domain is already the main
+content of ref [20], so perhaps the new contribution is to give an
+explicit expression in the time domain for the radio pulse away from
+the Cherenkov cone.
+[In ref [20] the explicit expression of the pulse in the time domain
+is only given in the Cherenkov cone. There is a small difference
+between the two expressions but no comment is made on this difference.
+Is this a correction? Moreover reference [20] treats LPM showers
+incorrectly, because the frequency spectrum of the pulses has the
+wrong low frequency limit (it should be the same as that of a shower
+of the same energy and no LPM effect). In this article the authors
+should discuss differences wrt ref [20] and address errors as well.]
+
+The authors discuss in much detail the behavior of the results
+obtained in the time domain, relating them to shower properties. A
+non-expert reader could be misled into thinking these are new
+findings, but most of them are actually well documented in the
+abundant literature on this topic starting with the Monte Carlo
+simulation of ref [13] and practically in all the articles that have
+followed up to date. Stating these properties is not a problem of
+course, moreover it is a plus because they serve as a check giving
+confidence that the calculation gives reasonable results, however
+proper references should be made to articles that have actually found
+the same properties with similar or different techniques. Leaving
+aside the inadequacy of the presentation of the results (to be
+addressed below), the immediate question that crops up is, is this
+result of enough new content to justify a new article in PRD? The
+answer in my opinion is that the result could be of interest for the
+field if the presentation of this is clear and the calculation leads
+to a compact expression (it appears to be so) which describes the
+pulses in this region with sufficient accuracy.
+
+There is a phenomenological part of the article that compares these
+analytical results in the time domain to an alternative calculation.
+This comparison is used to find the fit parameters for the physical
+scales of the showers. This, I believe, is new and maybe the authors
+are intending to justify the approximations made in the new analytical
+expression by making a detailed comparison of the result with a
+reference calculation. Putting aside all the doubts that one can have
+about the procedure used for such a "validation", the same question
+comes up, is this sufficient to be addressed in a PRD paper? In my
+opinion the answer is that maybe it is enough, given the outstanding
+effort that is being made to exploit the radio technique in ice in the
+last decade, and the current interest that the technique has for
+neutrino astronomy. It is true that simple models for radio pulses
+could be of much use at different levels in such experiments, as the
+authors state.
+
+Due to issues addressed above and a number of important issues that I
+will address below, it is clear to me that the article cannot be
+published in its current form and that major rewriting of the article
+is required for it to be published in any journal. This would imply
+adjusting the article to address my general comments above and to a
+number major issues that are very diverse and I will try to summarize
+in the text to follow. These problems are of sufficient severity and
+number that the final decision on whether the article is adequate for
+being published in PRD would depend on how they are finally addressed
+by the authors and I will not make a definitive statement.
+
+Major comments:
+
+The length of the article. This article is far too long for the amount
+of information given. More importantly it is written in a cumbersome
+style so that it is very tedious to find out what is exactly being
+done. It should be drastically shortened and simplified.
+
+There is a lot of spurious text. Parts of the text are clearly to be
+completely removed. I was particularly surprised to find out that
+section III B, that takes nearly two pages and seems an elaborate
+calculation, is simply an estimate of the width of the well known
+Greisen and Gaisser parameterizations, as obtained approximating them
+with gaussian functions. This is efficiently described in ref [31]
+already (which is the basis of this work) with a reference to Bruno
+Rossi. Most people working with showers have approximated the shower
+development with gaussians so it seems too trivial to be reported in
+detail. Moreover the derivation is particularly cumbersome. I do not
+even think it should be put in an appendix, the final result can just
+be displayed after a brief and clear description of what is actually
+being done. Incidentally references could be made to [31] and to the
+work of Andringa,S. et al. Astrop Phys 34 (2011) 360 describing both
+the gaussian approximation, fluctuations in the longitudinal spread
+(as named in [31], this is a better choice than "longitudinal length")
+and corrections to it. Incidentally the authors have payed very little
+attention to fluctuations in the shower profile which are relevant. It
+is particularly relevant to understand how the fluctuations in the
+longitudinal spread relate numerically to the small changes as the
+energy is varied. The sections on the uncertainty principle are in my
+opinion a distraction, it is not clear why they are introduced (nor is
+it clear that the principle is always satisfied, which is suspicious).
+
+A large number of variables is used together with several unfortunate
+choices of notation. Although I would usually classify such a comment
+under "minor issues about style", this article is particularly
+exaggerated in this respect and more importantly it becomes an
+obstacle to clarity, obscuring the reasoning and the expressions
+presented and contributing to the confusion of the reader. Here are
+some examples, again the list is not exhaustive:
+The authors use unnecessary changes of variables introducing names
+such as p,q,u, x, x_c, w_o, w_CF, w_1 ... that either giving little
+intuition to interpret the expressions, or I cannot see the need to
+introduce them all, and that in my opinion obscure the interpretation.
+In places the authors introduce redundant variables, for instance
+there is a cutoff frequency w_CF and a second one w_0 which is simply
+w_0=sqrt(2/3) w_CF. One could question the need to introduce two
+frequency scales which are so close, when a single one would do the
+job. The introduction of sigma=w/w_CF is another unnecessary new
+variable. For the lateral distribution a simple exponential is used as
+an approximation. The radius is labeled "rho" in cylindrical
+coordinates and a length scale is introduced as 1/rho_0/sqrt(2 pi)
+which is extremely confusing because here rho_0 is used as an inverse
+radial distance. 1/rho_0 is related linearly to the Moliere radius
+(incidentally the definition given of the Moliere radius is
+incorrect). It is unnecessary to introduce two scales for the lateral
+spread given the simple approach given in this article, one of the two
+is enough to set the scale and using two adds to the confusion of
+variables, particularly with the unnatural definition of rho_0.
+Another example of the latter type is introducing u=1-i eta, which is
+not justified because afterwards an expansion is made in powers of
+(1-u)=i eta, when u tends to 1. Clearly u is redundant and the natural
+variable to use is eta, the limit corresponding to eta going to zero.
+These problems include a few examples of bad choices of variables and
+labels, but the list is longer. The article should reduce the number
+of variables, change names where they lead to confusion such as the
+previous case, and eliminate spurious definitions that obscure the
+mathematical steps. Incidentally what I am demanding about improving
+the notation would end with a notation very close to that used in
+reference [31], which is an excellent article and has a rational
+labeling of variables. It should be used by the authors as a guide of
+style. Moreover, using the same conventions would make it a lot
+simpler to relate their work to the original work by Buniy and
+Ralston.
+
+More careful referencing is compulsory.
+The article has many issues with the references which are not
+acceptable. These are actually the most striking alarms on a first
+read. The first one is part of the first general comment, the way the
+article references earlier work on theoretical calculations is
+misleading, because the authors are not clear enough about what is new
+and what is not. The article should make a fair summary of what is
+being done in relation to what was done in the past, particularly in
+ref [31], what ref [20] added to it and finally limit the first part
+of this article to the minimal amount of material that is needed to
+present the time expression that follows from the work of [20] and the
+approximations made for the form factor.
+I will mention a few others but the list is not complete.
+In several places an inadequate reference is given, for instance the
+authors cite Hanson et al [20] for the Greisen model, they cite again
+[20] for showers with many maxima because of the LPM effect but the
+showers described in [20] have no multiple peaks, and again refer to
+[20] when they say that the lateral cascade width has the effect of a
+"low-pass filter", while [20] may be the first use of such a "term",
+such a reference is somewhat misleading in the sense that the effect
+of the cutoff in the frequency spectrum related to the lateral spread
+of the shower is described in multiple works on this topic, including
+the early ZHS MC calculation. The citation of the semi-analytic
+approach, ref [19], states that the method was "introduced ... to
+account for non-Gaussian fluctuations in the charge excess profile".
+This is simply not true, the method was introduced to provide a fast
+and accurate method to describe radio pulses in general (similar to
+the motivation behind the analytic calculation the authors are
+discussing). The list again is longer. Such a careless citation style
+is not acceptable.
+
+The expression of the pulse in the time domain away from the Cherenkov
+angle could be of interest. Yet the presentation of this result is
+again not clear. The authors have split the calculation into the text
+and the appendix in a way that is not adequate because the text cannot
+be followed without reading the appendix. The expression involves
+several approximations, firstly an expansion for small eta=w/w_CF
+(more clear than in (1-u)). The result is an integral which is claimed
+to be related to the line-broadening function. The comparison involves
+the definition of w_1=t_r/(2p), which depends on the retarded time,
+t_r. this is a variable and therefore it is not a number. So the
+condition for approximating the integral obtained by the symmetric
+approximation w_1<w is clearly not satisfied for p small, for t_r
+large and obviously for low values of w that are unavoidable in the w
+integral from infinity to -infinity. The justification of this
+approximation is non-existent and deserves at least a careful
+discussion.
+
+I am doubtful that this is a good approximation. In any case the
+authors could argue that the expression obtained this way is a
+reasonable approximation to the pulse. In this respect the latter part
+of the article, which compares these results to a reference
+calculation, takes some relevance. I did not find such reasoning
+though and if this is the intention of the authors it should be
+clearly stated. Indeed when one looks at the comparisons made for the
+off-cone case it is apparent that the agreement is a lot worse than
+for the on-cone case. Given the number of approximations made, another
+question crops up. What are the advantages of this expression relative
+to those of ref [13] that are intended to provide a good and rapid
+description of the pulses? This should be addressed for completitude.
+Moreover the approach used is clearly not valid for the LPM effect
+(this effect was also addressed in ref [20] with flaws), while the
+approach of [13] can deal with fluctuations of the shower profile and
+with the completely different profiles of showers fully affected by
+the LPM effect. This issue deserves a discussion.
+
+Incidentally a comparison is not made relative to a detailed
+simulation but rather to a calculation based on [13] that uses the
+simulation of the radio pulse in the Cherenkov cone to calculate the
+radio pulse away from it. This presumably has been done because [13]
+is fast but it is nevertheless an indirect way to compare. Some
+discussion of this is missing and multiple references are given to a
+simulation package that includes the approach of [13], what again
+leads to confusion because the reader may doubt whether they are
+comparing the parameterization to a MC simulation or to another model.
+If this is the case it needs to be discussed.
+
+There are many other issues of the paper that I am not willing to
+spend more time in writing because the condition for me to accept this
+article for publication is that the authors should rewrite it
+according to all these recommendations and concerns.
