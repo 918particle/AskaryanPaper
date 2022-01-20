@@ -5,12 +5,44 @@
 Second report of Referee A, DF12830/Hanson, December 6th, 2021 \\ \vspace{0.25cm}
 \hrulefill
 
-The authors have adequately addressed my concerns and I can see the paper is significantly improved with the reorganization and updates to the simulations. My only comment is the the signals in Fig. 6 (right panels) are clipped and the authors should consider expanding the y-axis.
+The authors have adequately addressed my concerns and I can see the paper is significantly improved with the reorganization and updates to the simulations. My only comment is the the signals in Fig. 6 (right panels) are clipped and the authors should consider expanding the y-axis. \\
 
 \textit{We thank Referee A for all the advice and guidance with the manuscript.  We recongize how valuable your time is and we appreciate it.} \\ \vspace{0.25cm}
 
 Report of Referee B, DF12830/Hanson, December 6th, 2021 \\ \vspace{0.25cm}
 \hrulefill
+
+\textit{We would like to provide some context about the manuscript that Referee B might not know.  This manuscript was first submitted on June 10th, 2021.  Referee A filed a report and we received it on July 29th, 2021.  In that initial report Referee A wrote the following about the topic and scope of the paper:} \\
+
+\begin{quote}
+The manuscript derives a fully analytic model of Askaryan radiation in ice in the time domain. \textbf{This manuscript will make an excellent addition to the literature} on modeling Askaryan signals in ice ...
+\end{quote}
+
+\textit{Referee A then presented a list of five areas where the manuscript could be improved.  These remarks involved stylistic and structural critiques.  None involved fundamental physics questions about any of the derivations or approximations.  One question was about the analysis approach in the second half of the paper.  Referee B refers to this section as the phenomenological section.  We performed this analysis again, with the modifications suggested by Referee A.  The results were improved slightly or unchanged, depending on the case.  By October 4th, 2021, we re-submitted our manuscript.  The editor noted that he was searching for a second referee, and by December 4th, 2021, we received a new referee report.  Referee A wrote the following (from above):}
+
+\begin{quote}
+The authors have adequately addressed my concerns and I can see the paper is significantly improved with the reorganization and updates to the simulations.
+\end{quote}
+
+\textit{We assumed that the report from Referee B would be of a similar nature: a concrete list of suggestions to improve the manuscript, especially six months into the process.  What we received from Referee B, to put it mildly, pushes the boundaries of incredulity.  Telling authors that ``major rewriting of the article is required for it to be published in any journal'' comes across as an attempt to block the paper on any grounds one can find, and not a good faith attempt to improve the paper.  How can Referee B know if the manuscript would or would not be published in \textbf{any} journal?  We did, in fact, rewrite large sections of the paper for Referee A.  For example, Referee A specifically requested that we introduce the appendices as a way to store all of the details:}
+
+\begin{quote}
+I recommend [appendices] to keep the main body of the text shorter, while maintaining the authors’ preference for presenting the complete derivation (which I appreciate).
+\end{quote}
+
+\textit{The original remark may be found below.  We have shared our concerns about this report with the editor, who agreed to bring in an adjudicating referee at the end of the process if we request it.  However, the editor has asked me to first submit a formal response.}
+
+\textit{I have made an attempt to categorize the critiques from the report of Referee B and address them systematically.  First, there appear to be questions about whether the manuscript represents work that is of sufficient novelty to merit publication in PRD.  Second, there are questions about distinctions between review material and new material.  Third, there are questions about the meaning of citations.  Finally, there are questions about notation, variables, and the details of derivations.  There are also recurring themes, like the relationship between the mathematical and phenomenological parts of the paper, and the overall length.  To make ourselves clear when responding to the four areas, we should develop some keywords.}
+
+\textit{In our responses below, we will use the phrase \textbf{``apparently not''} to respond to critiques in which our response involves invoking the outstanding match our analytical model achieves when it is compared to a model derived in a completely different way.  Semi-analytic models such as citations [19] and [30] in the manuscript received by Referee B have both a Monte Carlo component and an analytic component.  Further, the analytic component is derived in the time domain.  Our work from 2017 in citation [20] of the manuscript received by Referee B was derived in the Fourier domain.  From the Fourier domain model, we converted it to the time-domain with great care and effort, attempting to preserve validity for any viewing angle.  Correlation coefficients between our new time-domain model and the semi-analytic examples exceed 95\%, with fractional power differences on the order of a few percent.  That cannot be an accident, and we see that Referee B acknowledged that in the report.}
+
+\underline{Remarks about Novelty}
+
+\textit{To our knowledge, the literature on modeling the Askaryan effect does not yet contain a fully analytic model of the Askaryan field $\vec{E}(t,\theta)$ in the time-domain.  In the introduction section, we place our model in the appropriate context by describing the development of full MC and semi-analytic work.  We articulated four distinct advantages a fully analytic model would provide to radio detectors like IceCube Gen2 (radio) in part B of the conclusion section.  According to Referee A, and in our professional judgement, there is no question about whether this work is new enough to merit publication in a journal.  What follows is our response to individual comments made by Referee B about this topic.}
+
+``However as one one gets down to the details and compares the results with those of earlier publications, the article starts rising many doubts, in particular about what is really new in the theoretical calculation presented, and about what are the authors actually checking when they compare their analytic expressions to the results obtained with another `semi-analytical' approximation.''
+
+This model presents both a re-working of the on-cone derivation ($\theta = \theta_{\rm C}$) of $\vec{E}(t)$ from citation [20] Section V, and a derivation of the off-cone ($\theta \neq \theta_{\rm C}$) field $\vec{E}(t,\theta)$.  Both calculations are new in that they both demonstrate the effect of the complex poles on the actual function for $\vec{E}(t,\theta)$.  Further, to our knowledge, no one has published an off-cone fully analytic model.  Finally, the effect of the poles on the form of $\vec{E}(t,\theta)$ is validated against the output of NuRadioMC based on citation [30] for both the on and off-cone cases, and for electromagnetic and hadronic cascades.  We are completely open about how this comparison is done.  We note that the authors of [19] and [30] had access to the the ZHS MC code, but we do not, and it is not public.  Thus, we cannot compare our model to ZHS MC.  However, the ARVZ models in [19] and [30] match the full ZHS MC, and our model matches the ARVZ one.  We decided to include the derivation of the form factor $\widetilde{F}(\omega,\theta)$ from citation [20] only as a matter of convenience for the skeptical reader who would not want to take our word for it, or be forced to read the paper from 2017 just to accept the details of the current manuscript.  While Referee B had the time, patience, and curiosity to read the background papers, we do not think leaving details like the form factor out is wise.  Referee A is in agreement.  We want the reader to see the connection between the form factor and the final product.
 
 General discussion about suitability of the addressed topic: \\ 
 
