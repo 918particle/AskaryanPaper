@@ -136,7 +136,7 @@ The definition $\omega_{\rm 0} = \sqrt{2/3} ~ \omega_{\rm CF}$ has been used in 
 
 \subsubsection{A Note about the Moli\`{e}re Radius}
 
-In Section \ref{sec:fit} below, the parameter $l = 1/(\sqrt{2\pi}\rho_0)$ will be derived from best-fit $\omega_{\rm 0}$ values.  The parameter $l$ is the decay constant of the exponential in the ICD (Equation \ref{eq:f}).  The $l$-parameter can vary because the best-fit $\omega_{\rm 0}$ varies, and the two numbers are connected by Equation \ref{eq:sigma_0}.  It is important to note that $l \neq R_{\rm M}$, where $R_{\rm M}$ is the constant Moli\`{e}re radius.
+The parameter $l = 1/(\sqrt{2\pi}\rho_0)$ is the decay constant of the exponential in the ICD (Equation \ref{eq:f}), and it may be derived from best-fit values of $f_{\rm 0} = \omega_{\rm 0}/(2\pi)$ values in Section \ref{sec:fit}.  The $l$-parameter can vary because the best-fit $\omega_{\rm 0}$ varies, and the two numbers are connected by Equations \ref{eq:sigma_0} and \ref{eq:sigma_1}.  Note that $l \neq R_{\rm M}$, where $R_{\rm M}$ is the Moli\`{e}re radius.
 
 The Moli\`{e}re radius is defined as the lateral radius which forms a cylinder containing 90\% of the energy deposition of a cascade in dense media.  Let $X_{\rm 0}$ be the electromagnetic radiation length in ice, and let $Z$ be the atomic number.  A common formula for the Moli\`{e}re radius, $R_{\rm M}$, is
 
@@ -308,13 +308,13 @@ As with the electromagnetic case, the longitudinal length parameter $a$ goes as 
 \section{On-Cone Field Equations}
 \label{sec:onc}
 
-The $\hat{\theta}$-component of the electromagnetic field at $\theta = \theta_{\rm C}$ will now be built in the time-domain, using the general RB field equations in the Fourier domain, along with the form factor and longitudinal length parameter.  Beginning with Eq. 45 JCH+AC \cite{10.1016/j.astropartphys.2017.03.008}, assuming Equation \ref{eq:F_main} for the form factor, with $\sigma = \omega/\omega_{\rm CF}$ and $\eta = \omega/\omega_{\rm CF}$, and letting $E_{\rm 0}$ be proportional to cascade energy $E_{\rm C}$:
+The $\hat{\theta}$-component of the electromagnetic field at $\theta = \theta_{\rm C}$ will now be built in the time-domain from Equation \ref{eq:main}.  Setting $\theta = \theta_{\rm C}$ in the general RB field equations (Appendix \ref{app:a}), with Equation \ref{eq:F_main} for $\widetilde{F}$, $\sigma = \omega/\omega_{\rm CF}$ and $\eta = \omega/\omega_{\rm CF}$, and letting $E_{\rm 0}$ be proportional to cascade energy $E_{\rm C}$ produces Equation 45 from JCH+AC \cite{10.1016/j.astropartphys.2017.03.008}:
 
 \begin{equation}
 r\widetilde{E}(\omega,\theta_{\rm C}) = \frac{(-i\omega) E_0 \sin(\theta_{\rm C}) e^{i\omega r/c}}{(1-i \omega/\omega_{\rm C})^{1/2} (1+(\omega/\omega_{\rm CF})^2)^{3/2}} \label{eq:re_1}
 \end{equation}
 
-More detail is provided in Appendix \ref{app:a}. Let the retarded time be $t_{\rm r} = t - r/c$, and let $\omega_0 = \sqrt{\frac{2}{3	}}\omega_{\rm CF}$ and $\hat{E}_{\rm 0} = E_{\rm 0} \sin\theta_{\rm C}$.  The inverse Fourier transform of Eq. \ref{eq:re_1} is (see Appendix \ref{app:a})
+More detail is provided in Appendix \ref{app:a}. Let the retarded time be $t_{\rm r} = t - r/c$, and let $\omega_0 = \sqrt{\frac{2}{3	}}\omega_{\rm CF}$ and $\hat{E}_{\rm 0} = E_{\rm 0} \sin\theta_{\rm C}$.  The inverse Fourier transform of Eq. \ref{eq:re_1} is
 
 \begin{widetext}
 \begin{equation}
@@ -422,7 +422,7 @@ Turning to the case for which $\theta \neq \theta_{\rm C}$, the $\hat{\theta}$-c
 r\vec{E}(\omega,\theta) = E_{\rm 0} \left( \frac{\omega}{2\pi} \right) \psi \vec{\mathcal{E}}(\omega,\theta) \widetilde{F}(\omega,\theta) \label{eq:main2}
 \end{equation}
 
-The first task is to simplify $\vec{\mathcal{E}}(\omega,\theta)$ before taking the inverse Fourier transform.  The full definition of $\vec{\mathcal{E}}$ is given in Appendix \ref{app:b}. The simplification inolves expanding $\vec{\mathcal{E}}(\omega,\theta)$ in a Taylor series such that $u = 1-i\eta \approx 1$, restricting $\eta < 1$.  The restriction $\eta < 1$ may be satisfied by either $a\sin\theta/r \ll 1$, or $k a \sin\theta \ll 1$, or both. Once $\vec{\mathcal{E}}(\omega,\theta)$ is simplified, the inverse Fourier transform of Equation \ref{eq:main2} may be evaluated to produce the result.  Table \ref{tab:features_2} contains useful variable definitions, Table \ref{tab:features_3} contains useful function definitions, and Table \ref{tab:features_4} contains special cases of the functions in Table \ref{tab:features_3}.
+The first task is to simplify $\vec{\mathcal{E}}(\omega,\theta)$ before taking the inverse Fourier transform.  The full definition of $\vec{\mathcal{E}}$ is given in Appendix \ref{app:a}. The simplification inolves expanding $\vec{\mathcal{E}}(\omega,\theta)$ in a Taylor series such that $u = 1-i\eta \approx 1$, restricting $\eta < 1$.  The restriction $\eta < 1$ may be satisfied by either $a\sin\theta/r \ll 1$, or $k a \sin\theta \ll 1$, or both. Once $\vec{\mathcal{E}}(\omega,\theta)$ is simplified, the inverse Fourier transform of Equation \ref{eq:main2} may be evaluated to produce the result.  Table \ref{tab:features_2} contains useful variable definitions, Table \ref{tab:features_3} contains useful function definitions, and Table \ref{tab:features_4} contains special cases of the functions in Table \ref{tab:features_3}.
 
 \begin{table}
 \renewcommand{\arraystretch}{1.5}
@@ -889,7 +889,7 @@ Two physical parameters are necessary to compare wavelength to lateral ICD width
 
 \begin{align}
 \gamma &= k \sin(\theta) \\
-\sigma &= \gamma / (\sqrt{2\pi} \rho_0)
+\sigma &= \gamma / (\sqrt{2\pi} \rho_0) \label{eq:sigma_1}
 \end{align}
 
 The integral becomes
