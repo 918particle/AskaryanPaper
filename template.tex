@@ -446,7 +446,7 @@ Function & Definition \\ \hline
 $f(u,x)$ & $\left( u + 3 \frac{(1-u)^2}{u} \frac{x^2 - x x_C}{1-x^2} \right)^{-1/2}$ \\
 $g(u,x)$ & $\exp \left( -\frac{1}{2}(ka)^2 (x - x_C)^2 u^{-1} \right)$ \\
 $h(u,x)$ & $\left( \frac{1-u}{u} \right) q$ \\
-$\vec{\mathcal{E}}(u,x) \cdot \hat{\theta}$ & $f(x,u) g(u,x)(1 - h(u,x))$ \\ \hline
+$\vec{\mathcal{E}}(u,x) \cdot \hat{\theta}$ & $f(u,x) g(u,x)(1 - h(u,x))$ \\ \hline
 \end{tabular}
 \caption{\label{tab:features_3} Useful functions for the derivation of the off-cone Askaryan electromagnetic field.  The last row contains the vector structure of the $\hat{\theta}$-component of the field.}
 \end{table}
@@ -500,7 +500,7 @@ Though the line-broadening function cannot be expressed analytically, there are 
 |t_{\rm r}| < | 2 p \omega | = \omega \left(\frac{a}{c}\right)^2 \sin^2\theta_{\rm C}\Delta\theta^2 \label{eq:restrict}
 \end{equation}
 
-For example, taking $a = 5.0$ meters, a cutoff frequency of $\nu = 1$ GHz, and letting $\Delta \theta$ be as small as $1.5^{\circ}$ allows $|t_{\rm r}| \lesssim 0.9$ ns.  For $\Delta \theta = 3.0^{\circ}$, $|t_{\rm r}| \lesssim 3.6$ ns.  The field quickly approaches zero outside this window.  Hereafter, this step will be called the \textit{symmetric approximation.}  The restriction on $\Delta\theta$ is formalized in Sec. \ref{sec:usage}.  Using the results of Sec. \ref{sec:sigma}, one can show that $|t_{\rm r}|/\sigma_{\rm t} < \omega \sigma_{\rm t}$, or that $|t_{\rm r}|\sigma_{\rm \omega} < \omega/\sigma_{\rm \omega}$.  Solving $I_{\rm 0}$ clears the way for the final result (see Appendix \ref{app:b}):
+It is shown in the next section that $\sqrt{2p}$ is the pulse width $\sigma_{\rm t}$, so $| 2 p \omega |$ has units of time.  Using the results of Sec. \ref{sec:sigma} below, the restriction on the retarded time may be written $|t_{\rm r}|/\sigma_{\rm t} < \omega \sigma_{\rm t} = 2\pi (\sigma_{\rm t}/T)$.  That is, the number of pulse widths included in the time-window should be less than the ratio of the pulse width to the period of the lowest included frequency.  For example, taking $a = 5.0$ meters, a frequency of $\nu = 0.5$ GHz, and $\Delta \theta = 1.7^{\circ}$ implies $|t_{\rm r}| \lesssim 0.5$ ns.  The field quickly approaches zero outside this window.  Hereafter, this step will be called the \textit{symmetric approximation.}  The restriction on $\Delta\theta$ is formalized in Sec. \ref{sec:usage}.  Solving $I_{\rm 0}$ using the symmetric approximation clears the way for the final result (see Appendix \ref{app:b}):
 
 \begin{equation}
 \boxed{
