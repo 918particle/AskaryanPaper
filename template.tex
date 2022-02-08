@@ -155,7 +155,7 @@ Using $Z = 8$ and $A = 16$ for oxygen: $X_{\rm 0} = 34.46$ g cm$^{-2}$. Converti
 \subsection{The Longitudinal Length Parameter}
 \label{sec:ff2}
 
-The next piece required in the assembly of the main electromagnetic field is the energy-dependence of the overall amplitude, and the energy dependence of the longitudinal length parameter, $a$, which is a part of $\vec{\mathcal{E}}$ in Eq. \ref{eq:main} \cite{10.1103/physrevd.65.016003}.  What follows are two separate discussions, one for electromagnetic cascades, and one for hadronic cascades.  We share these calculations for convenience, but note that a variety of theoretical and experimental results on this topic are available \cite{saltzberg} \cite{ANDRINGA2011360} \cite{10.1088/1742-6596/1879/3/032089}.  
+The next piece required in the assembly of the main electromagnetic field is the energy-dependence of the overall amplitude, and the energy dependence of the longitudinal length parameter, $a$, which is a part of $\vec{\mathcal{E}}$ in Equation \ref{eq:main} \cite{10.1103/physrevd.65.016003}.  What follows are two separate discussions, one for electromagnetic cascades, and one for hadronic cascades.  We share these calculations for convenience, but note that a variety of theoretical and experimental results on this topic are available \cite{saltzberg} \cite{ANDRINGA2011360} \cite{10.1088/1742-6596/1879/3/032089}.  
 
 \subsubsection{Electromagnetic Case}
 
@@ -191,13 +191,13 @@ The function $f(z')$ is the normalized Greisen distribution.  Solving the age eq
 z' = \frac{2s\ln(x)}{3-s} \label{eq:z}
 \end{equation}
 
-From this point forward, since $f(z')$ is being studied near $s = 1$, we use $\ln(s) \approx s - 1$. Substituting back into Equation \ref{eq:norm1}:
+Since $f(z')$ is being studied near $s = 1$, we use $\ln(s) \approx s - 1$. Substituting back into Equation \ref{eq:norm1}:
 
 \begin{equation}
 f(s) = x^{-1} \exp \left \lbrace s \ln(x) \left( \frac{5 - 3 s}{3 - s} \right) \right \rbrace \label{eq:fs}
 \end{equation}
 
-To calculate the Gaussian width of $f(s)$, consider the following procedure.  Suppose there is a function $f(y)$ such that $\ln(f(y))$ is equal to a negatively oriented quadratic: $\ln(f(y)) = -(1/2) y^2/\sigma^2$.  Solving for $y$ yields $y_{\pm} = \pm \sqrt{-2 \ln f} \sigma$.  Assuming $f(y)$ behaves like a Gaussian near the global maximum, the width is $\Delta y = y_{+} - y_{-} = 2\sqrt{-2 \ln f} \sigma$ and $\ln f = -0.5$ precisely when it should: $y = \sigma$.  In a similar fashion, let $q = \ln(xf)/\ln(x)$ in Eq. \ref{eq:fs}.  This leaves
+To calculate the Gaussian width of $f(s)$, consider the following procedure.  Suppose there is a function $f(y)$ such that $\ln(f(y))$ is equal to a negatively oriented quadratic: $\ln(f(y)) = -(1/2) y^2/\sigma^2$.  Solving for $y$ yields $y_{\pm} = \pm \sqrt{-2 \ln f} \sigma$.  Assuming $f(y)$ behaves like a Gaussian near the global maximum, the width is $\Delta y = y_{+} - y_{-} = 2\sqrt{-2 \ln f} \sigma$ and $\ln f = -0.5$ precisely when it should: $y = \sigma$.  In a similar fashion, let $q = \ln(xf)/\ln(x)$ in Equation \ref{eq:fs}.  This leaves
 
 \begin{equation}
 q = \frac{5-3s}{3-s}s
@@ -228,7 +228,7 @@ Noting that $q = 1 + \ln(f)/\ln(x)$, and that the quadratic factors:
 \begin{align}
 \Delta z' &= \frac{1}{2} \ln(x) (q-1)^{1/2}(q-25)^{1/2} \\
 \Delta z' &= \frac{1}{2} \ln(x) (\ln(f)/\ln(x))^{1/2}(q-25)^{1/2} \\
-\Delta z' &= \frac{1}{2}\sqrt{\ln(x)} \left( \ln(f) \ln(f) / \ln(x) - 24 \ln(f) \right)^{1/2}
+\Delta z' &= \frac{1}{2}\sqrt{\ln(x)} \left( (\ln(f))^2 / \ln(x) - 24 \ln(f) \right)^{1/2}
 \end{align}
 
 The term involving $(\ln(f))^2$ is small, positive, and negligible compared to the second term in that square root.  Dropping it and setting $\Delta z' = a$ yields the main result:
@@ -247,31 +247,31 @@ a = \frac{z_0}{\rho_{ice}}\sqrt{\ln(x)}\sqrt{-6 \ln(f)}
 }
 \end{equation}
 
-Note that $a \propto \sqrt{\ln(x)}$.  Since $n_{\rm max} \propto x/\sqrt{\ln(x)}$, the product $n_{\rm max} a$, is an approximation of the area under $n(z')$, and it goes as the energy $x = E_C/E_{\rm crit}$.  This was noted by RB \cite{10.1103/physrevd.65.016003}, who placed $n_{\rm max} a$ in the electromagnetic field normalization rather than $E_{\rm C}$.  Allowing $f$ to drop to 40\% of its peak value, and using $E_{\rm crit} \approx 10^8$ eV, gives $a \approx 4$ m for $E_{\rm C} = 10^{16}$ eV.  It will be shown in Section \ref{sec:fit} that 4 meters is a good number for a $10^{16}$ eV cascade derived from full MC simulations.
+Note that $a \propto \sqrt{\ln(x)}$.  Since $n_{\rm max} \propto x/\sqrt{\ln(x)}$, the product $n_{\rm max} a$, is an approximation of the area under $n(z')$, and it goes as the energy $x = E_C/E_{\rm crit}$.  This was noted by RB \cite{10.1103/physrevd.65.016003}, who placed $n_{\rm max} a$ in the electromagnetic field normalization rather than $E_{\rm C}$.  Allowing $f$ to drop to 40\% of its peak value, and using $E_{\rm crit} \approx 10^8$ eV, gives $a \approx 4$ m for $E_{\rm C} = 10^{16}$ eV.  It will be shown in Section \ref{sec:fit} that 4 meters is accurate when compared to the result from MC simulation.
 
 \subsubsection{Hadronic Case}
 
 The Gaisser-Hillas distribution describes hadronic cosmic-ray air showers, but has also been applied to hadronic cascades in dense media \cite{testbed}.  The original function reads
 
 \begin{equation}
-n(z') = N_{max} \left( \frac{z'-z_{0}}{z_{max} - z_{0}} \right)^{(z_{max} - z_{0})/\lambda} e^{ \frac{z_{max} - z'}{\lambda}}
+n(z') = n_{max} \left( \frac{z'-z_{0}}{z_{max} - z_{0}} \right)^{(z_{max} - z_{0})/\lambda} e^{ \frac{z_{max} - z'}{\lambda}}
 \end{equation}
 
-The variables are defined as follows: $N_{max}$ is the instantaneous maximum number of particles in the cascade, $z'$ is the longitudinal distance in radiation lengths, $z_0$ is the initial starting point, $\lambda$ is the interaction length, and $z'_{max}$ is the location of $N_{max}$.
+The variables are defined as follows: $n_{max}$ is the instantaneous maximum number of particles in the cascade, $z'$ is the longitudinal distance in radiation lengths, $z_0$ is the initial starting point, $\lambda$ is the interaction length, and $z'_{max}$ is the location of $n_{max}$.
 
-The calculation of the energy dependence of $a$ is broken into three steps: the normalization of $n(z')$ to be a fraction of $n_{max}$ with convenient parameters, approximation the distribution near $z_{max}$, and the longitudinal width determination that contains a pre-defined fraction of the normalized $n_{max}$.  Let $x = (z'-z_0)/\lambda)$, and $w = (z_{max} - z_0)/\lambda$.  One useful (normalized) parameterization is
+The calculation of the energy dependence of $a$ is broken into three steps: the normalization of $n(z')$ to be a fraction of $n_{max}$, approximation near $z_{max}$, and the longitudinal length determination based on the fraction of the normalized $n_{max}$.  Let $x = (z'-z_0)/\lambda)$, and $w = (z_{max} - z_0)/\lambda$.  The result is
 
 \begin{equation}
 f(z') = \left( \frac{x}{w} \right)^{w} \exp(w-x) \label{eq:norm}
 \end{equation}
 
-Taking the logarithm of both sides of Eq. \ref{eq:norm} and then dividing both sides by $w$ gives:
+Taking the logarithm of both sides of Equation \ref{eq:norm} and then dividing both sides by $w$ gives:
 
 \begin{equation}
 \frac{\ln(f)}{w} = \ln(x/w) + 1 - \frac{x}{w}
 \end{equation}
 
-Near the shower maximum, $x/w \approx 1$.  Let $\epsilon = x/w$, and expand the right-hand side in a series about $\epsilon = 1$ to second order, noting that the first order vanishes:
+Near the shower maximum, $x/w \approx 1$.  Let $\epsilon = x/w$, and expand the right-hand side in a series about $\epsilon = 1$ to second order:
 
 \begin{equation}
 \frac{\ln(f)}{w} = -\frac{1}{2}(\epsilon - 1)^2
@@ -303,7 +303,7 @@ a = \Delta z' = \sqrt{\lambda z'_{\rm max}} \sqrt{-8 \ln(f)}
 } \label{eq:main_2}
 \end{equation}
 
-As with the electromagnetic case, the longitudinal length parameter $a$ goes as $\sqrt{z_{max}}$.
+As with the electromagnetic case, the longitudinal length parameter $a$ goes as $\sqrt{z_{max}}$ which produces similar lengths as the electromagnetic case when scaled by the appropriate interaction length and ice density.
 
 \section{On-Cone Field Equations}
 \label{sec:onc}
@@ -314,7 +314,7 @@ The $\hat{\theta}$-component of the electromagnetic field at $\theta = \theta_{\
 r\widetilde{E}(\omega,\theta_{\rm C}) = \frac{(-i\omega) E_0 \sin(\theta_{\rm C}) e^{i\omega r/c}}{(1-i \omega/\omega_{\rm C})^{1/2} (1+(\omega/\omega_{\rm CF})^2)^{3/2}} \label{eq:re_1}
 \end{equation}
 
-More detail is provided in Appendix \ref{app:a}. Let the retarded time be $t_{\rm r} = t - r/c$, and let $\omega_0 = \sqrt{\frac{2}{3	}}\omega_{\rm CF}$ and $\hat{E}_{\rm 0} = E_{\rm 0} \sin\theta_{\rm C}$.  The inverse Fourier transform of Eq. \ref{eq:re_1} is
+More detail is provided in Appendix \ref{app:a}. Let the retarded time be $t_{\rm r} = t - r/c$, and let $\omega_0 = \sqrt{\frac{2}{3	}}\omega_{\rm CF}$ and $\hat{E}_{\rm 0} = E_{\rm 0} \sin\theta_{\rm C}$.  The inverse Fourier transform of Equation \ref{eq:re_1} is
 
 \begin{widetext}
 \begin{equation}
@@ -322,7 +322,7 @@ r E(t,\theta_{\rm C}) = \frac{\hat{E}_0 i \omega_{\rm C} \omega_{\rm 0}^2}{\pi} 
 \end{equation}
 \end{widetext}
 
-In Equation \ref{eq:part1}, the derivative with respect to the retarded time $d/dt_{\rm r}$ is introduced to remove a factor of $(-i\omega)$ from the numerator.  Further, the three simple poles arise from approximation in the denominator.  The poles are located on the imaginary axis, above and below the origin.  Thus, region of convergence of Eq. \ref{eq:part1} depends on the sign of the retarded time.  The details of each case are provided in Appendix \ref{app:a}.  The results, including the effect of each pole and each sign of $t_{\rm r}$, become
+In Equation \ref{eq:part1}, the derivative with respect to the retarded time $d/dt_{\rm r}$ is introduced to remove a factor of $(-i\omega)$ from the numerator.  Further, the three simple poles arise from approximation in the denominator.  The poles are located on the imaginary axis, above and below the origin.  Thus, region of convergence of Equation \ref{eq:part1} depends on the sign of the retarded time.  The details of each case are provided in Appendix \ref{app:a}.  The results, including the effect of each pole and each sign of $t_{\rm r}$, become
 
 \begin{widetext}
 \begin{equation}
@@ -348,7 +348,7 @@ $E_{\rm 0}$ & $\approx n_{\rm max}a$ \\
 $\omega_{\rm 0}$ & $\sqrt{\frac{2}{3}} \omega_{\rm CF}$ \\
 $\omega_{\rm CF}$ & $(c\sqrt{2\pi}\rho_{\rm 0})/(n\sin\theta)$ \\
 $\omega_{\rm C}$ & $(rc)/(na^2\sin^2\theta)$ \\
-$\epsilon = \omega_{\rm 0}/\omega_{\rm C}$ & $\sqrt{2/3} (\sqrt{2\pi} \rho_{\rm 0} a) (a/r) $ (see Eq. 46 of \cite{10.1016/j.astropartphys.2017.03.008}) \\
+$\epsilon = \omega_{\rm 0}/\omega_{\rm C}$ & $\sqrt{2/3} (\sqrt{2\pi} \rho_{\rm 0} a) (a/r) $ (see Equation 46 of \cite{10.1016/j.astropartphys.2017.03.008}) \\
 $t_{\rm r}$ & $t - r/c$ \\ \hline
 \end{tabular}
 \caption{\label{tab:features_1} The parameters used to build Equation \ref{eq:on_cone}.  Fitted values in comparison to semi-analytic parameterizations are shown in Section \ref{sec:fit}.}
@@ -488,7 +488,7 @@ The inverse Fourier transform of the $\hat{\theta}$-component gives the time-dom
 r E(t,\theta) = \mathcal{F}^{-1} \left\lbrace E_0 \left(\frac{\omega}{2\pi}\right) \widetilde{F} \psi \mathcal{E} \right\rbrace
 \end{equation}
 
-Intriguingly, the result is proportional to the \textit{line-broadening function, $H$} (DLMF 7.19, \cite{NIST:DLMF}) common to spectroscopy applications.  There are three terms in Eq. \ref{eq:expand_rev_1}.  Two terms ultimately vanish, being integrals over odd integrands (see Appendix \ref{app:b}).  The integral that remains contains $H$, with $\omega_{\rm 1} = t_{\rm r}/(2p)$:
+Intriguingly, the result is proportional to the \textit{line-broadening function, $H$} (DLMF 7.19, \cite{NIST:DLMF}) common to spectroscopy applications.  There are three terms in Equation \ref{eq:expand_rev_1}.  Two terms ultimately vanish, being integrals over odd integrands (see Appendix \ref{app:b}).  The integral that remains contains $H$, with $\omega_{\rm 1} = t_{\rm r}/(2p)$:
 
 \begin{equation}
 I_{\rm 0} = 2 \pi i \left( \frac{\omega_{\rm C}}{\omega_{\rm 0}} \right) e^{- \frac{t_{\rm r}^2}{4p}} H(\sqrt{p}\omega_0,i\omega_1\sqrt{p})
@@ -500,7 +500,7 @@ Though the line-broadening function cannot be expressed analytically, there are 
 |t_{\rm r}| < | 2 p \omega | = \omega \left(\frac{a}{c}\right)^2 \sin^2\theta_{\rm C}\Delta\theta^2 \label{eq:restrict}
 \end{equation}
 
-It is shown in the next section that $\sqrt{2p}$ is the pulse width $\sigma_{\rm t}$, so $| 2 p \omega |$ has units of time.  Using the results of Sec. \ref{sec:sigma} below, the restriction on the retarded time may be written $|t_{\rm r}|/\sigma_{\rm t} < \omega \sigma_{\rm t} = 2\pi (\sigma_{\rm t}/T)$.  That is, the number of pulse widths included in the time-window should be less than the ratio of the pulse width to the period of the lowest included frequency.  For example, taking $a = 5.0$ meters, a frequency of $\nu = 0.5$ GHz, and $\Delta \theta = 1.7^{\circ}$ implies $|t_{\rm r}| \lesssim 0.5$ ns.  The field quickly approaches zero outside this window.  Hereafter, this step will be called the \textit{symmetric approximation.}  The restriction on $\Delta\theta$ is formalized in Sec. \ref{sec:usage}.  Solving $I_{\rm 0}$ using the symmetric approximation clears the way for the final result (see Appendix \ref{app:b}):
+It is shown in the next section that $\sqrt{2p}$ is the pulse width $\sigma_{\rm t}$, so $| 2 p \omega |$ has units of time.  Using the results of Sec. \ref{sec:sigma} below, the restriction on the retarded time may be written $|t_{\rm r}|/\sigma_{\rm t} < \omega \sigma_{\rm t} = 2\pi (\sigma_{\rm t}/T)$.  That is, the accuracy of the waveform should be trusted within a number of pulse widths that is less than $2\pi$ times the ratio of the pulse width to the period of the lowest frequency.  This is not a strong requirement, since the field quickly approaches zero after several pulse widths.  Hereafter, this step will be called the \textit{symmetric approximation}, because the result for $r \vec{E}(t_{\rm r},\theta)$ in Equation \ref{eq:off_cone} is symmetric.  The restriction on $\Delta\theta$ is formalized in Sec. \ref{sec:usage}.  Solving $I_{\rm 0}$ using the symmetric approximation clears the way for the final result (see Appendix \ref{app:b}):
 
 \begin{equation}
 \boxed{
@@ -523,7 +523,7 @@ Equation \ref{eq:off_cone} represents the time-domain solution for the off-cone 
 \caption{\label{fig:off_cone2} Contours of $E(t,\theta)$ vs. $\theta$ vs. $t_{\rm r}$ (Equation \ref{eq:off_cone}), normalized.  The normalization is the same as Fig. \ref{fig:off_cone}.  Although the contour lines extend into the region near $\theta_{\rm C}$, Equation \ref{fig:off_cone2} is only being evaluated at $\Delta \theta > 1.5^{\circ}$ (see text for details).}
 \end{figure}
 
-As in the on-cone result, the overall field amplitude scales with energy ($n_{\rm max} a$).  However, the amplitude scales with the first power of cutoff-frequency.  The units of $E_{\rm 0}$ remain V Hz$^2$ because of the factors of $t_{\rm r}$ and $p$, which have units of time and time-squared, respectively.  The argument of the complementary error function, $\sqrt{p}\omega_0$, is unitless.  This factor is strictly positive, so the range of the complementary error function is $(0,1)$.  The factor $\sqrt{p}\omega_0$ cannot be zero without setting $\theta = \theta_{\rm C}$, or setting $\omega_{\rm CF} = 0$.  Both cases are not allowed.  Equation \ref{eq:off_cone} represents the \textit{off-cone} ($\theta \neq \theta_{\rm C}$) solution, so $p \neq 0$.  Another possibility is that $p = 0$ if $a = 0$, but this implies $E_{\rm 0}=0$.  Further, $\omega_{\rm CF} = 0$ would require cascade particles to have no lateral momentum, which is not physical.  Therefore, $0 < \erfc(\sqrt{p}\omega_0) < 1$.
+As in the on-cone result, the overall field amplitude scales with energy ($n_{\rm max} a$).  However, the amplitude scales with the first power of cutoff-frequency.  The units of $E_{\rm 0}$ remain V Hz$^2$ because of the factors of $t_{\rm r}$ and $p$, which have units of time and time-squared, respectively.  The argument of the complementary error function, $\sqrt{p}\omega_0$, is unitless.  This factor is strictly positive, so the range of the complementary error function is $(0,1)$.  The factor $\sqrt{p}\omega_0$ cannot be zero without setting $\theta = \theta_{\rm C}$, or setting $\omega_{\rm CF} = 0$.  Both cases are not allowed.  Equation \ref{eq:off_cone} represents the \textit{off-cone} ($\theta \neq \theta_{\rm C}$) solution, so $p \neq 0$.  Setting $\omega_{\rm CF} = 0$ would require cascade particles to have no lateral momentum, which is not physical.  Another possibility is that $p = 0$ if $a = 0$, but this implies $E_{\rm 0}=0$ (see Section \ref{sec:ff2}).  Therefore, $0 < \erfc(\sqrt{p}\omega_0) < 1$.
 
 \subsection{Verification of the Uncertainty Principle}
 \label{sec:sigma}
@@ -551,7 +551,7 @@ Expanding near $u \approx 1$ implies that $\eta \to 0$.  This condition correspo
 \subsection{Usage of the On-Cone versus Off-Cone Fields}
 \label{sec:usage}
 
-The form of Eq. \ref{eq:off_cone}, and the restriction between $\Delta\theta$ and $|t_{\rm r}|$ from the symmetric approximation suggests the limit $\Delta\theta = \theta-\theta_{\rm C}$ must be examined carefully.  Since $p \propto (\cos\theta - \cos\theta_{\rm C})^2$, probing the model near $\theta = \theta_{\rm C}$ is equivalent to taking the limit that $p \to 0$.  Intriguingly, the $p^{-1}$-dependence in the field does not lead to a divergence.  As the field grows in amplitude from $p^{-1}$ as $p \to 0$, the field \textit{width}, $\sqrt{2p}$, approaches zero.  Thus, the power in the field does not diverge.  
+The form of Equation \ref{eq:off_cone}, and the restriction between $\Delta\theta$ and $|t_{\rm r}|$ from the symmetric approximation suggests the limit $\Delta\theta = \theta-\theta_{\rm C}$ must be examined carefully.  Since $p \propto (\cos\theta - \cos\theta_{\rm C})^2$, probing the model near $\theta = \theta_{\rm C}$ is equivalent to taking the limit that $p \to 0$.  Intriguingly, the $p^{-1}$-dependence in the field does not lead to a divergence.  As the field grows in amplitude from $p^{-1}$ as $p \to 0$, the field \textit{width}, $\sqrt{2p}$, approaches zero.  Thus, the power in the field does not diverge.  
 
 Equations \ref{eq:width_oncone} and \ref{eq:a_versus_theta} contain the pulse widths of the on-cone and off-cone fields, respectively.  Power in the off-cone case is limited by the pulse width $\sqrt{2p}$, and the observed power should decrease in coherence as $\Delta\theta$ and the pulse width both increase.  Thus, a reasonable constraint on $\Delta\theta_{\rm min}$ is given by setting the minimum off-cone pulse width equal to the on-cone pulse width.  Setting Eqs. \ref{eq:width_oncone} and \ref{eq:a_versus_theta} equal:
 
@@ -586,14 +586,14 @@ The quantity in parentheses is $\eta$, with $\omega = \omega_{\rm 0}$.  Since $\
 Assuming $\epsilon \approx 1$, $f_{\rm 0} \approx 1$ GHz, $n = 1.78$ for solid ice, and $c = 0.3$ m ns$^{-1}$ (see Sec. \ref{sec:fit:on}), $k_{\rm 0} \approx 35$ m$^{-1}$.  Taking $r = 1000$ m, $\Delta\theta_{\rm min} \approx 1^{\circ}$.  Simple rules to remember for the application of the off-cone field are:
 
 \begin{align}
-\Delta\theta &\geq 1^{\circ} \\
-\Delta\theta &\propto \frac{1}{\sqrt{kr}}
+\Delta\theta_{\rm min} &\geq 1^{\circ} \\
+\Delta\theta_{\rm min} &\propto \frac{1}{\sqrt{kr}}
 \end{align}
 
 \section{Comparison to Semi-Analytic Parameterizations}
 \label{sec:fit}
 
-The fully analytic model will now be compared to the ARZ semi-analytic parameterization used in NuRadioMC \cite{PhysRevD.101.083005} to predict signals in IceCube-Gen2 Radio.  To provide concrete comparisons, a small set of waveforms were generated with NuRadioMC, for both electromagnetic (EM) and hadronic (HAD) cascades.  The EM cascades have an energy of $E_{\rm C} = 10^{16}$ eV, while the HAD cascades have an energy of $E_{\rm C} = 10^{17}$ eV.  The reason the EM energy is lower is to avoid the LPM effect, which changes the shape of $n(z')$, and requires more careful modeling \cite{10.1016/j.astropartphys.2017.03.008}.
+The fully analytic model will now be compared to the ARZ semi-analytic parameterization \cite{PhysRevD.101.083005} used in NuRadioMC \cite{10.1140/epjc/s10052-020-7612-8} to predict signals in IceCube-Gen2 Radio.  To provide concrete comparisons, a small set of waveforms were generated with NuRadioMC, for both electromagnetic and hadronic cascades.  The electromagnetic cascades have an energy of $E_{\rm C} = 10^{16}$ eV, while the hadronic cascades have an energy of $E_{\rm C} = 10^{17}$ eV.  The reason the EM energy is lower is to avoid the LPM effect, which changes the shape of $n(z')$, and requires more careful modeling \cite{10.1016/j.astropartphys.2017.03.008}.  To be clear, the comparison is between the fully analytic model of Equations \ref{eq:on_cone} and \ref{eq:off_cone} and the NuRadioMC implementation of the ARZ semi-analytic parameterization shown in \cite{PhysRevD.101.083005}.
 
 The comparison involves three stages.  First, waveforms and $a$-values are generated for each cascade type, energy, and angle: $\theta = \theta_{\rm C} + 3.0^{\circ}$, and $\theta = \theta_{\rm C}$.  Second, Equations \ref{eq:on_cone} and \ref{eq:off_cone} are tuned to match the waveforms.  In each fit, the Pearson correlation coefficient ($\rho$) between MC waveforms and Equations \ref{eq:on_cone} or \ref{eq:off_cone} is maximized, and the sum-squared of amplitude differences ($(\Delta E)^2$) is minimized.  Finally, best-fit parameters are tabulated and compared with MC values from NuRadioMC. 
 
@@ -635,7 +635,7 @@ The $(\Delta E)^2$ minimization resembles $\chi^2$ minimization, but lacks weigh
 
 Typically, maximizing $\rho$ corresponds to minimizing $(\Delta E)^2$, but the waveforms fluctuate in shape and amplitude.  In Fig. \ref{fig:f_vs_rho}, $(\Delta E)^2$ is graphed versus $\rho$ for one event.  Typical best-fit $\rho$-values are $\approx 0.97$ for this set, corresponding to best-fit $(\Delta E)^2$ values of $\approx 7\%$.  Contours of $\rho>0.95$ for $f_{\rm 0}$ versus $f_{\rm C}$ are shown in Fig. \ref{fig:fit:oncone} (Left column). The crosses represent the best-fit location.  The dashed gray line at $y=x$ corresponds to $f_{\rm 0}/f_{\rm C} = \epsilon = 1$.  Although Equation \ref{eq:on_cone} contains an expansion to first order in $\epsilon$, the motivation for the expansion is to cause the formula to resemble the derivative of the vector potential presented by ARZ \cite{PhysRevD.101.083005}.  The only real restriction is that $\epsilon \neq 2$, due to the singularity.  Thus, the best-fit results avoid the solid black lines ($\epsilon = 2$) in Fig. \ref{fig:fit:oncone}, but find $\epsilon$-values large enough to account for pulse symmetry.  The best-fit waveforms are shown in Fig. \ref{fig:fit:oncone} (Right column), where the gray curves correspond to ARZ from NuRadioMC and the black curves represent Equation \ref{eq:on_cone}.
 
-Table \ref{fit:tab:oncone_em} contains the best-fit results for the Eq. \ref{eq:on_cone} parameters, along with best-fit $\rho$-values and $(\Delta E)^2$-values.  The typical fractional power difference is $\approx 7$ \%, and correlation coefficients are $\approx \rho = 0.97$.  For every waveform, $f_{\rm 0} > f_{\rm C}$, implying $\epsilon>1$.  This result will shift to $\epsilon<1$ below for the hadronic events.  To estimate the acceptable range for $f_{\rm 0}$ and $f_{\rm C}$, the horizontal and vertical distances from the crosses to the $\rho > 0.95$ contour is assigned to the errors in Tab. \ref{fit:tab:oncone_em}.  Though this error definition leads to large fractional errors in the frequencies and $a$, the $a$-errors encompass the $a$-values from NuRadioMC.  Though outside the scope of this work, future work would include a full-scale NuRadioMC run with thousands of waveform comparisons.  The region in $[f_{\rm 0},f_{\rm C}]$ space for which UHE-$\nu$ signals are expected for IceCube-Gen2 Radio would be established, and man-made backgrounds that mimic UHE-$\nu$ could be rejected based on the best-fit location in the space.  Finally, the connection between $\epsilon$ and cascade type (hadronic or electromagnetic) would be probed.
+Table \ref{fit:tab:oncone_em} contains the best-fit results for the Equation \ref{eq:on_cone} parameters, along with best-fit $\rho$-values and $(\Delta E)^2$-values.  The typical fractional power difference is $\approx 7$ \%, and correlation coefficients are $\approx \rho = 0.97$.  For every waveform, $f_{\rm 0} > f_{\rm C}$, implying $\epsilon>1$.  This result will shift to $\epsilon<1$ below for the hadronic events.  To estimate the acceptable range for $f_{\rm 0}$ and $f_{\rm C}$, the horizontal and vertical distances from the crosses to the $\rho > 0.95$ contour is assigned to the errors in Tab. \ref{fit:tab:oncone_em}.  Though this error definition leads to large fractional errors in the frequencies and $a$, the $a$-errors encompass the $a$-values from NuRadioMC.  Though outside the scope of this work, future work would include a full-scale NuRadioMC run with thousands of waveform comparisons.  The region in $[f_{\rm 0},f_{\rm C}]$ space for which UHE-$\nu$ signals are expected for IceCube-Gen2 Radio would be established, and man-made backgrounds that mimic UHE-$\nu$ could be rejected based on the best-fit location in the space.  Finally, the connection between $\epsilon$ and cascade type (hadronic or electromagnetic) would be probed.
 
 \begingroup
 \squeezetable
@@ -670,9 +670,9 @@ Err. & $3.08$ & $0.1$ & $0.3$ & $0.07$ & $0.003$ & $0.8$ \\
 \caption{\label{fig:fit:oncone2} \textbf{Fit results: hadronic case, $\theta = \theta_{\rm C}$, $E_{\rm C} = 100$} PeV.  The six rows (from top to bottom) correspond to NuRadioMC waveforms 1-6, 100 PeV hadronic cascades.  (Left column) The best-fits for $f_{\rm 0}$ and $f_{\rm C}$.  Dashed line: $\epsilon = 1$.  Solid line: $\epsilon = 2$.  Gray contour: $\rho > 0.9$.  Black cross: best-fit.  (Right column) The best-fit waveforms.  Gray: semi-analytic parameterizations from \cite{10.1140/epjc/s10052-020-7612-8}.  Black: Equation \ref{eq:on_cone}.}
 \end{figure}
 
-\textbf{Hadronic case.}  Using the same procedure as the electromagnetic case, NuRadioMC was used to generate six hadronic cascades at 100 PeV for comparison to Eq. \ref{eq:on_cone}.  The energy was increased to show that the waveforms and model scale with energy.  The hadronic cascades are not morphed my the LPM effect, so Eq. \ref{eq:on_cone} remains valid.  The same fit procedure as the electromagnetic case was used, with two exceptions.  First, the range for $E_{\rm 0}$ was increased by a factor of 10, because the cascade energy is $E_{\rm C} = 100$ PeV.  Second, the correlation contours represent $\rho = 0.985$.  In a simple 2-level \verb+for+-loop, the Pearson correlation coefficient $\rho$ was maximized, fixing the complex poles.  Next, the sum of the squared amplitude differences $(\Delta E)^2$ was minimized with the best-fit pole frequencies.  The main results are shown in Figure \ref{fig:fit:oncone2}.
+\textbf{Hadronic case.}  Using the same procedure as the electromagnetic case, NuRadioMC was used to generate six hadronic cascades at 100 PeV for comparison to Equation \ref{eq:on_cone}.  The energy was increased to show that the waveforms and model scale with energy.  The hadronic cascades are not morphed by the LPM effect, so Equation \ref{eq:on_cone} remains valid.  The same fit procedure as the electromagnetic case was used, with two exceptions.  First, the range for $E_{\rm 0}$ was increased by a factor of 10, because the cascade energy is $E_{\rm C} = 100$ PeV.  Second, the correlation contours represent $\rho = 0.985$.  In a simple 2-level \verb+for+-loop, the Pearson correlation coefficient $\rho$ was maximized, fixing the complex poles.  Next, the sum of the squared amplitude differences $(\Delta E)^2$ was minimized with the best-fit pole frequencies.  The main results are shown in Figure \ref{fig:fit:oncone2}.
 
-The results shown in Figure \ref{fig:fit:oncone2} demonstrate that modeling hadronic cascades at $\theta = \theta_{\rm C}$ is similar to the electromagnetic case, except that the contours indicate best-fits with $\epsilon < 1$.  The amplitudes of the best-fit analytic functions in Figure \ref{fig:fit:oncone} are smaller by a factor of 10 due to the smaller $E_{\rm C}$.  Recall that the amplitude of Eq. \ref{eq:on_cone} goes as $E_{\rm 0} \omega_{\rm 0}^2$, so those parameters will combine to produce the factor of 10 difference.  The gray contours in Fig. \ref{fig:fit:oncone2} correspond to $\rho = 0.985$, because the fits are slightly better compared to the electromagentic case.
+The results shown in Figure \ref{fig:fit:oncone2} demonstrate that modeling hadronic cascades at $\theta = \theta_{\rm C}$ is similar to the electromagnetic case, except that the contours indicate best-fits with $\epsilon < 1$.  The amplitudes of the best-fit analytic functions in Figure \ref{fig:fit:oncone} are smaller by a factor of 10 due to the smaller $E_{\rm C}$.  Recall that the amplitude of Equation \ref{eq:on_cone} goes as $E_{\rm 0} \omega_{\rm 0}^2$, so those parameters will combine to produce the factor of 10 difference.  The gray contours in Fig. \ref{fig:fit:oncone2} correspond to $\rho = 0.985$, because the fits are slightly better compared to the electromagentic case.
 
 Table \ref{fit:tab:oncone_had} contains the best-fit parameters corresponding to Figure \ref{fig:fit:oncone2}, along with results for $\rho$ and $(\Delta E)^2$.  The typical power difference $(\Delta E)^2$ has decreased significantly with respect to the electromagnetic case, despite using identical fit procedures.  The $\rho$-values all exceed 0.985, and the $(\Delta E)^2$ results are typically below 2 percent.  Intriguingly, $\epsilon < 1$ means higher $f_{\rm C}$ values, which in turn yields systematically low $a$-values, despite the increased energy.  Reconstructed $a$-values are still within a factor of 2 of those derived from NuRadioMC.  The $\epsilon$ parameter controls pulse asymmetry, and the hadronic pulses with $\epsilon < 1$ appear to be more asymmetric than the electromagnetic.  Despite systematic offsets, the best-fit $a$ and the NuRadioMC $a$ value are tightly correlated (see Fig. \ref{fit:fig:a_vs_a} below).
 
@@ -962,7 +962,7 @@ The complete field from the original RB model \cite{10.1103/physrevd.65.016003},
 r\vec{E}(\omega,\theta) = E_{\rm 0} \left( \frac{\omega}{2\pi} \right) \psi \vec{\mathcal{E}}(\eta,\theta) \widetilde{F} \label{app:eq:main}
 \end{equation}
 
-Let Eq. \ref{eq:F_main} for the form factor, with $\sigma = \omega/\omega_{\rm CF}$ and $\eta = \omega/\omega_{\rm CF}$, and letting $E_{\rm 0}$ be proportional to cascade energy $E_{\rm C}$:
+Let Equation \ref{eq:F_main} for the form factor, with $\sigma = \omega/\omega_{\rm CF}$ and $\eta = \omega/\omega_{\rm CF}$, and letting $E_{\rm 0}$ be proportional to cascade energy $E_{\rm C}$:
 
 \begin{equation}
 r\widetilde{E}(\omega,\theta_{\rm C}) = \frac{(-i\omega) E_0 \sin(\theta_{\rm C}) e^{i\omega r/c}}{(1-i \omega/\omega_{\rm C})^{1/2} (1+(\omega/\omega_{\rm CF})^2)^{3/2}} \label{app:eq:re_1}
@@ -975,7 +975,7 @@ Suppose $\omega < \omega_{\rm C}$, and $\omega < \omega_{\rm CF}$, such that the
 (1+(\omega/\omega_{\rm CF})^2)^{3/2} & \approx 1 + \frac{3}{2} \left(\frac{\omega}{\omega_{\rm CF}}\right)^2
 \end{align}
 
-Using the approximations introduces simple poles into the complex formula for the frequency-dependent electric field.  Inserting the approximations in the denominator of Eq. \ref{app:eq:re_1}, we have
+Using the approximations introduces simple poles into the complex formula for the frequency-dependent electric field.  Inserting the approximations in the denominator of Equation \ref{app:eq:re_1}, we have
 
 \begin{equation}
 r\widetilde{E}(\omega,\theta_{\rm C}) = \frac{(-i\omega) E_0 \sin(\theta_{\rm C}) e^{i\omega R/c}}{\left(1-\frac{i}{2} \omega/\omega_{\rm C}\right) \left(1+\frac{3}{2}(\omega/\omega_{\rm CF})^2 \right) }
@@ -996,12 +996,12 @@ r E(t,\theta_{\rm C}) = \frac{\hat{E}_0 i \omega_{\rm C} \omega_{\rm 0}^2}{\pi} 
 \end{widetext}
 
 \begin{enumerate}
-\item If $t_r > 0$: Consider the contour comprised of the real axis and the clockwise-oriented negative infinite semi-circle.  On the contour, the exponential phase factor in Eq. \ref{app:eq:part1} goes as
+\item If $t_r > 0$: Consider the contour comprised of the real axis and the clockwise-oriented negative infinite semi-circle.  On the contour, the exponential phase factor in Equation \ref{app:eq:part1} goes as
 \begin{equation}
 \exp(-i\omega t_r) = \exp(-i(R\cos\phi +iR\sin\phi) t_r)
 \end{equation}
 For the semi-circle, $\phi \in [\pi,2\pi]$, so $\sin\phi < 0$ and $t_r > 0$.  Exponential decay occurs and the integrand vanishes on the semi-circle for $|\omega| = R \to \infty$.
-\item If $t_r < 0$: Consider the contour comprised of the real axis and the counter-clockwise-oriented positive infinite semi-circle.  On the contour, the exponential phase factor in Eq. \ref{app:eq:part1} goes again as
+\item If $t_r < 0$: Consider the contour comprised of the real axis and the counter-clockwise-oriented positive infinite semi-circle.  On the contour, the exponential phase factor in Equation \ref{app:eq:part1} goes again as
 \begin{equation}
 \exp(-i\omega t_r) = \exp(-i(R\cos\phi +iR\sin\phi) t_r)
 \end{equation}
@@ -1028,7 +1028,7 @@ Expanding to linear order in $\epsilon$, assuming $\epsilon < 1$, and recalling 
 r E(t,\theta_{\rm C}) \approx \frac{1}{3} \hat{E}_0 \omega_{\rm CF}^2 \left( 2 e^{-2\omega_{\rm C} t_r} - \left(1+\frac{\epsilon}{2} \right) e^{-\omega_{\rm 0}t_r} \right)
 \end{equation}
 
-Turning to the case of $t_r < 0$, consider integrating Eq. \ref{app:eq:part1} along the contour comprised of the real axis and the counter-clockwise-oriented positive infinite semi-circle.  The contour encloses one pole, and the exponent ensures convergence:
+Turning to the case of $t_r < 0$, consider integrating Equation \ref{app:eq:part1} along the contour comprised of the real axis and the counter-clockwise-oriented positive infinite semi-circle.  The contour encloses one pole, and the exponent ensures convergence:
 
 \begin{equation}
 r E(t,\theta_{\rm C}) = (2\pi i)\hat{E}_0 (\pi)^{-1} i \omega_{\rm C} \omega_{\rm 0}^2 \frac{d}{dt_r}\left( \frac{ e^{\omega_{\rm 0} t_r}}{ \left(2 i \omega_{\rm C} + i\omega_{\rm 0} \right) (2i\omega_{\rm 0}) } \right)
@@ -1062,7 +1062,7 @@ r E(t,\theta_{\rm C}) = \frac{1}{3} \hat{E}_0 \omega_{\rm CF}^2
 \section{Details of the Off-Cone Field Equation Derivation}
 \label{app:b}
 
-Using Tabs. \ref{tab:features_2}-\ref{tab:features_4}, Eq. \ref{app:eq:big_one_1} reduces to
+Using Tabs. \ref{tab:features_2}-\ref{tab:features_4}, Equation \ref{app:eq:big_one_1} reduces to
 
 \begin{equation}
 \mathcal{E}(u,x) = f(u,x)g(u,x)(1-h(u,x))
@@ -1087,7 +1087,7 @@ The first-derivatives of $f$, $g$, and $h$, evaluated at $u = 1$, are given in T
 \dot{\mathcal{E}}(1,x) = \frac{1}{2} e^{-y} \left(2 y + 2q - 1\right) \label{app:eq:dot}
 \end{equation}
 
-Inserting Eq. \ref{app:eq:dot} into Eq. \ref{app:eq:expand},
+Inserting Equation \ref{app:eq:dot} into Equation \ref{app:eq:expand},
 
 \begin{equation}
 \mathcal{E}(u,x) = e^{-y} \left( 1 + \frac{1}{2} (u-1)\left(  2 y + 2q - 1 \right) \right)
@@ -1143,7 +1143,7 @@ The result for $I_{\rm 0}$ involves the complementary error function (DLMF 7.7.1
 I_{\rm 0} = 2 i \omega_C e^{- \frac{t_{\rm}^2}{2p}} \pi \omega_{\rm 0}^{-1} e^{p \omega_{\rm 0}^2} \erfc(\sqrt{p} \omega_{\rm 0}) \label{app:eq:intrigue5}
 \end{equation}
 
-The integrals $I_1$ and $I_3$ are zero by symmetry, with odd integrands over $(-\infty,\infty)$.  Inserting the result for $I_0$ into Eq. \ref{app:eq:intrigue} and evaluating the derivative finishes the problem (see Sec. \ref{sec:ofc}).
+The integrals $I_1$ and $I_3$ are zero by symmetry, with odd integrands over $(-\infty,\infty)$.  Inserting the result for $I_0$ into Equation \ref{app:eq:intrigue} and evaluating the derivative finishes the problem (see Sec. \ref{sec:ofc}).
 
 \bibliography{apssamp}
 
