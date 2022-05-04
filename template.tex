@@ -51,13 +51,11 @@ The coordinate system of the Askaryan radiation from a vector current density $\
 \caption{\label{fig:geo} (a) Side view of the coordinate systems used in the analysis. Spherical unprimed coordinates refer to the observer.  Primed cylindrical coordinates refer to $\vec{J}(\rho',z')$. (b) Front view of the coordinate system.  The instantaneous charge density (ICD) is assumed to have no $\phi'$-dependence. (c) The function $n(z')$ describes the total cascade excess charge, and it has a characteristic width $a$.  The ICD has an instantaneous width much smaller than $a$ \cite{10.1016/j.astropartphys.2017.03.008}.}
 \end{figure}
 
-In Fig. \ref{fig:geo} (c), an archetypal cascade profile is shown in the form of an \textit{excess} charge function $n(z')$ with characteristic longitudinal length $a$.  The individual ICDs represent the excess charge density for small windows of time, and $n(z')$ refers to the total excess charge as a function of $z' = ct'$.  Approximating the central portion of $n(z')$ as a Gaussian distribution $N(\mu,\sigma)$ corresponds to setting $a = 2 \sigma$.  Askaryan radiation occurs because of the excess charge from cascade electrons ($\approx 20\%$) \cite{zhs,PhysRevD.65.103002,10.1016/j.astropartphys.2017.03.008}.  Cascades may be characterized as \textit{electromagnetic}, initiated by charged outgoing leptons from the UHE-$\nu$ interaction, or \textit{hadronic}, initiated by the nucleus with which the UHE-$\nu$ interacts.  Electromagnetic cascades follow the Greisen distribution and hadronic cascades follow the Gaisser-Hillas distribution.  An example of such an implementation is AraSim, in which the semi-analytic ARVZ parameterization is used \cite{10.1016/j.astropartphys.2011.11.010}.
+In Fig. \ref{fig:geo} (c), an archetypal excess charge profile $n(z')$ is shown with characteristic longitudinal length $a$.  The individual ICDs represent the excess charge density for small windows of time, and $n(z')$ refers to the total excess charge as a function of $z'$.  Approximating the central portion of $n(z')$ as a Gaussian distribution $N(\mu,\sigma)$ corresponds to setting $a = 2 \sigma$.  Askaryan radiation occurs because $n(z')$ represents excess negative charge \cite{zhs,PhysRevD.65.103002,10.1016/j.astropartphys.2017.03.008}.  Cascades may be characterized as \textit{electromagnetic}, initiated by charged outgoing leptons from UHE-$\nu$ interactions, or \textit{hadronic}, initiated by the nuclei with which the UHE-$\nu$ interact.  Electromagnetic cascades follow the Greisen distribution and hadronic cascades follow the Gaisser-Hillas distribution.  An example of such an implementation via the ARVZ semi-analytic parameterization is AraSim \cite{10.1016/j.astropartphys.2011.11.010}.
 
-The units of the electromagnetic field in the Fourier domain are V/m/Hz, often converted in the literature to V/m/MHz. To make the distance-dependence explicit, both sides of field equations are multiplied by $r$, as in $r\vec{E} = ... $, making the units V/Hz. Throughout this work, an overall field normalization constant $E_{\rm 0}$ is used \textit{in the time domain}, and it is directly proportional to the cascade energy $E_{\rm C}$. Thus, $E_{\rm 0}$ may be linearly scaled with energy, as in most Askaryan radiation models.  When the field amplitude is proportional to $E_{\rm 0}$ times a characteristic frequency-squared (on-cone), the units of $E_{\rm 0}$ must be V/Hz$^2$.  When the field amplitude is proportional to $E_{\rm 0}$ times a characteristic frequency divided by a characteristic pulse width (off-cone), the units of $E_{\rm 0}$ remain V/Hz$^2$.
+The units of the electromagnetic field in the Fourier domain are V/m/Hz, often converted in the literature to V/m/MHz. To make the distance-dependence explicit, both sides of field equations are multiplied by $r$, as in $r\vec{E} = ... $, making the units V/Hz. Throughout this work, an overall field normalization constant $E_{\rm 0}$ is used \textit{in the time domain}, and it is directly proportional to the cascade energy $E_{\rm C}$. Thus, $E_{\rm 0}$ may be linearly scaled with energy, as in other Askaryan models.  We show that the on-cone field amplitude is proportional to $E_{\rm 0}$ times a characteristic frequency-squared, so the units of $E_{\rm 0}$ are V/Hz$^2$.  For off-cone results, we show that the field amplitude is proportional to $E_{\rm 0}$ times a characteristic frequency divided by a characteristic pulse width, and the units of $E_{\rm 0}$ remain V/Hz$^2$.
 
-In Section \ref{sec:ff2}, we review why the longitudinal length $a$ in both the electromagnetic and hadronic cases depends weakly on the ratio of the initial cascade energy to the cascade critical energy: $a \sim \sqrt{\ln{(E_{\rm C}/E_{\rm crit})}}$.  For the Greisen distribution, it can be shown that if $n_{\rm max} = n(z_{\rm max})$, where $z_{\rm max} = \ln{(E_{\rm C}/E_{\rm crit})}$, then $n_{\rm max} a \sim E_{\rm C}/E_{\rm crit}$.  Thus, the area under the curve $n(z')$ scales as $E_{\rm C}$.  Among the RB results is the idea that the Askaryan radiation amplitude is proportional to $n_{\rm max} a$ and therefore $E_{\rm C}$.  The cascade develops over a length $\approx a$, but the radiation is coherent over a length $\Delta z'_{\rm coh}$ for which the displacement is constant to first order relative to a wavelength.  The RB field equations remain valid for both $\Delta z'_{\rm coh} > a$ and $\Delta z'_{\rm coh} < a$.
-
-The $\eta$ parameter is the square of the ratio of $a$ to $\Delta z'_{\rm coh}$:
+In Section \ref{sec:ff2}, we review briefly the energy-dependence of the longitudinal length $a$ in both the electromagnetic and hadronic cases.  For the Greisen distribution with critical energy $E_{\rm crit}$, it can be shown that if $n_{\rm max} = n(z_{\rm max})$, where $z_{\rm max} = \ln{(E_{\rm C}/E_{\rm crit})}$, then $n_{\rm max} a \sim E_{\rm C}/E_{\rm crit}$.  Thus, the area under the curve $n(z')$ scales with $E_{\rm C}$.  RB show that the Askaryan radiation amplitude is proportional to $n_{\rm max} a$ and therefore $E_{\rm C}$.  The cascade develops over a length $\approx a$, but the radiation is coherent over a length $\Delta z'_{\rm coh}$ for which the displacement is constant to first order relative to a wavelength.  The $\eta$ parameter is the square of the ratio of $a$ to $\Delta z'_{\rm coh}$:
 
 \begin{equation}
 \eta = \left( \frac{a}{\Delta z'_{\rm coh}} \right)^2 = \frac{k}{r} (a\sin\theta)^2
@@ -70,47 +68,37 @@ In far-field, $\eta<1$.  In the first JCH+AC model, a limiting frequency $\omega
 \label{eq:eta1}
 \end{equation}
 
-The effect of $\omega_{\rm C}$ is described in Section \ref{sec:onc}. The Askaryan radiation is primarily polarized along the unit vector $\hat{\theta}$, with a small amount along $\hat{r}$ \cite{10.1016/j.astropartphys.2017.03.008,10.1103/physrevd.84.103003}.  The wavevector associated with propagation along $r$ and polarized linearly along $\hat{\theta}$ is $k = (2\pi)/(n\lambda)$, where $n$ is the index of refraction.  A 3D wavevector is defined by RB, equivalent to $\vec{q} = nk(1, \vec{\rho}/R)$.  The vector current density is treated by RB as a charge density times the velocity of the ICD: $\vec{J}(t,\vec{x}') = \rho(z'-vt,\rho') \vec{v}$.  Further, the charge density is factored into $n(z')$ times ICD: $\rho(z'-vt,\rho') = n(z') f(z'-vt,\rho')$.  The form factor $\widetilde{F}$ is the three-dimensional spatial Fourier transform of the ICD $f(z'-vt,\rho')$:
+The effect of $\omega_{\rm C}$ is described in Section \ref{sec:onc}. The Askaryan radiation is primarily polarized in the $\hat{\theta}$-direction, with a small amount along $\hat{r}$ \cite{10.1016/j.astropartphys.2017.03.008,10.1103/physrevd.84.103003}.  The wavevector is $k = (2\pi)/(n\lambda)$, where $n$ is the index of refraction.  A 3D wavevector is defined by RB, equivalent to $\vec{q} = nk(1, \vec{\rho}/R)$.  The vector current density is treated by RB as a charge density times the velocity of the ICD: $\vec{J}(t,\vec{x}') = \rho(z'-vt,\rho') \vec{v}$.  Further, the charge density is factored into $n(z')$ times ICD: $\rho(z'-vt,\rho') = n(z') f(z'-vt,\rho')$.  The form factor $\widetilde{F}$ is the three-dimensional spatial Fourier transform of the ICD \cite{10.1103/physrevd.65.016003}.
 
-\begin{equation}
-\widetilde{F}(\vec{q}) = \int d^3x' f(\vec{x}')e^{-i \vec{q} \cdot \vec{x}'}
-\end{equation}
-
-The result for $\widetilde{F}$ was calculated by JCH+AC \cite{10.1016/j.astropartphys.2017.03.008}, and more detail on that derivation is provided in Section \ref{sec:ff1}, along with the energy-dependence on the longitudinal length $a$ in Section \ref{sec:ff2}.  JCH+AC define a parameter $\sigma$, equal to the ratio of angular frequency to the filter frequency of $\widetilde{F}$:
+The result for $\widetilde{F}$ was derived analytically by JCH+AC \cite{10.1016/j.astropartphys.2017.03.008}, and that derivation is briefly described in Section \ref{sec:ff1}.  JCH+AC define a parameter $\sigma$, and $\widetilde{F}$ is a function of $\sigma$: $\widetilde{F}(\sigma)$.  The variable $\sigma$ is the ratio of angular frequency to the low-pass cutoff frequency $\omega_{\rm CF}$ of $\widetilde{F}$:
 
 \begin{equation}
 \sigma = \frac{\omega}{\omega_{\rm CF}} \label{eq:sigma_0}
 \end{equation}
 
-Armed with $\widetilde{F}$, the longitudinal length $a$ and the corresponding energy-dependence on $E_{\rm 0}$, the RB field equations $\vec{\mathcal{E}}$, displacement $r$, the Askaryan electromagnetic field may be assmbled according to the following form:
+Armed with $\widetilde{F}$, the longitudinal length $a$ and the corresponding energy-dependence on $E_{\rm 0}$, the RB field equations $\vec{\mathcal{E}}$, and the displacement $r$, the Askaryan electromagnetic field may be assembled according to the following form \cite{10.1103/physrevd.65.016003}:
 
 \begin{equation}
 r\vec{E}(\omega,\theta) = E_{\rm 0} \left( \frac{\omega}{2\pi} \right) \psi \vec{\mathcal{E}}(\omega,\theta) \widetilde{F}(\omega,\theta) \label{eq:main}
 \end{equation}
 
-The factor $E_{\rm 0}$ represents the overall amplitude scale, and it is proportional to cascade energy.  The factor $\omega$ is the angular frequency.  The variable $\psi$ is $\psi = -i \exp(ikr) \sin\theta$.  The function $\vec{\mathcal{E}}(\omega,\theta)$ contains the vector and complex pole structure of the field (see \cite{10.1016/j.astropartphys.2017.03.008}).  As presented above, $\widetilde{F}(\omega,\theta)$ is the form factor.  Thus, the model represented by Equation \ref{eq:main} is an \textit{all-$\theta$, all-$\omega$} model.  Equation \ref{eq:main} is valid at all frequencies not attenuated by $\widetilde{F}(\omega,\theta)$, and all viewing angles not attenuated by $\vec{\mathcal{E}}(\omega,\theta)$.  The goal of the following sections is to build an \textit{all-$\theta$, all-$t$} model in the time-domain, derived from Equation \ref{eq:main}.
+The factor $E_{\rm 0}$ is proportional to cascade energy.  The factor $\omega$ is the angular frequency.  The variable $\psi$ is $\psi = -i \exp(ikr) \sin\theta$.  The function $\vec{\mathcal{E}}(\omega,\theta)$ contains the vector and complex pole structure of the field (see \cite{10.1103/physrevd.65.016003} and \cite{10.1016/j.astropartphys.2017.03.008}).  The model represented by Equation \ref{eq:main} is an \textit{all-$\theta$, all-$\omega$} model.  Equation \ref{eq:main} is valid at all frequencies not attenuated by $\widetilde{F}(\omega,\theta)$, and all viewing angles not attenuated by $\vec{\mathcal{E}}(\omega,\theta)$.  The first goal of this work is to build an \textit{all-$\theta$, all-$t$} model in the time-domain, derived from Equation \ref{eq:main}, and the second goal is to compare it to semi-analytic parameterizations.
 
 \section{The Form Factor and Longitudinal Length Parameter}
 \label{sec:ff}
 
-In order to arrive at the main electromagnetic field in the time-domain, the individual pieces of Equation \ref{eq:main} must first be assembled.  The first piece will be the form factor $\widetilde{F}$ that accounts for the 3D ICD, followed by some remarks about the energy-dependence of the longitudinal length parameter $a$.
+To arrive at the main electromagnetic field in the time-domain, the individual pieces of Equation \ref{eq:main} must first be assembled.  The first piece will be the form factor $\widetilde{F}$ that accounts for the 3D ICD, followed by some remarks about the energy-dependence of the longitudinal length parameter $a$.
 
 \subsection{The Form Factor}
 \label{sec:ff1}
 
-Let an observer be a distance $r$ from a charge distribution $f(z',\rho')$ in a primed cylindrical coordinate system $\vec{x}' = (z',\vec{\rho}')$.  Let the scalar wavevector in a material with index of refraction $n$ be $k = 2\pi/(n\lambda)$, and the angular frequency be $\omega = c k$.  Recall the definition of $\vec{q}$ from Section \ref{sec:unit}: $\vec{q} = nk(1, \vec{\rho}/R)$.  As presented in Section \ref{sec:unit} the \textit{form factor} for the cascade ICD is the 3D Fourier transform of $f(z',\vec{\rho}')$.
+As presented in Section \ref{sec:unit} the form factor is the 3D Fourier transform of the ICD $f(z',\vec{\rho}')$, with $\vec{q} = nk(1, \vec{\rho}/R)$:
 
 \begin{equation}
 F(\vec{q}) = \int d^3 x' f(z',\rho') e^{-i \vec{q} \cdot \vec{x}'}
 \end{equation}
 
-The goal is to evaluate $\widetilde{F}$ in the Fourier domain for an ICD definition informed by cascade simulations.  Simulations of the cascade induced by the neutrino indicate a thin wave of charge in $z'$ spread uniformly in $\phi'$, that decreases exponentially in $\rho'$ \cite{10.1016/j.astropartphys.2017.03.008}.  Thus,
-
-\begin{equation}
-f(x') = \rho_0^2 \delta(z' - ct) \exp(-\sqrt{2\pi}\rho_0 \rho') \label{eq:f}
-\end{equation}
-
-The thin wave of charge moves at speed $c$, and the $\rho_{\rm 0}$ parameter has units of inverse length.  The ICD function $f(z',\rho')$ is a number density, and integrating over $\rho'd\rho'd\phi'$, with $z' = ct'$, shows that $f$ is normalized to 1.  The full derivation of $\widetilde{F}$ given $f(z',\rho')$ is given in Appendix \ref{app:f}.  The final result is a simple analytic formula:
+The goal is to evaluate $\widetilde{F}$ in the Fourier domain for an ICD definition informed by cascade simulations.  Simulations of the cascade induced by UHE-$\nu$ indicate a thin wave of charge in $z'$ spread uniformly in $\phi'$, that decreases exponentially in $\rho'$.  Using these observations JCH+AC complete the derivation in \cite{10.1016/j.astropartphys.2017.03.008}.  The final result was a simple analytic formula:
 
 \begin{equation}
 \boxed{
@@ -118,15 +106,15 @@ The thin wave of charge moves at speed $c$, and the $\rho_{\rm 0}$ parameter has
 } \label{eq:F_main}
 \end{equation}
 
-According to Equation \ref{eq:F_main}, the form factor is a low-pass filter with the cutoff-frequency $\omega_{\rm CF}$ introduced in Section \ref{sec:unit}: $\sigma = \omega/\omega_{\rm CF}$:
+The form factor acts as a low-pass filter with the cutoff-frequency $\omega_{\rm CF}$ introduced in Section \ref{sec:unit}: $\sigma = \omega/\omega_{\rm CF}$:
 
 \begin{align}
 \widetilde{F} &= \frac{1}{(1+\sigma^2)^{3/2}} \approx \frac{1}{1+\frac{3}{2} \sigma^2} \\
 \widetilde{F} &\approx \frac{1}{(1+i \sqrt{3/2}\sigma)(1-i \sqrt{3/2} \sigma)} \\
-\widetilde{F} &\approx \frac{\omega_{\rm 0}^2}{(\omega+i\omega_{\rm 0})(\omega-i\omega_{\rm 0})}
+\widetilde{F} &\approx \frac{\omega_{\rm 0}^2}{(\omega+i\omega_{\rm 0})(\omega-i\omega_{\rm 0})} \label{eq:two_pole}
 \end{align}
 
-The definition $\omega_{\rm 0} = \sqrt{2/3} ~ \omega_{\rm CF}$ has been used in the final step.  The two-pole approximation resembles the original ZHS parameterization that matched full MC results below 1 GHz (see Equation 20 of \cite{zhs}).
+The definition $\omega_{\rm 0} = \sqrt{2/3} ~ \omega_{\rm CF}$ has been used in the final step.  Equation \ref{eq:two_pole} matches the original ZHS parameterization (see Equation 20 of \cite{zhs}).
 
 \begin{figure}
 \centering
@@ -136,118 +124,38 @@ The definition $\omega_{\rm 0} = \sqrt{2/3} ~ \omega_{\rm CF}$ has been used in 
 
 \subsubsection{A Note about the Moli\`{e}re Radius}
 
-The parameter $l = 1/(\sqrt{2\pi}\rho_0)$ is the decay constant of the exponential in the ICD (Equation \ref{eq:f}), and it may be derived from best-fit values of $f_{\rm 0} = \omega_{\rm 0}/(2\pi)$ values in Section \ref{sec:fit}.  The $l$-parameter can vary because the best-fit $\omega_{\rm 0}$ varies, and the two numbers are connected by Equations \ref{eq:sigma_0} and \ref{eq:sigma_1}.  Note that $l \neq R_{\rm M}$, where $R_{\rm M}$ is the Moli\`{e}re radius.
-
-The Moli\`{e}re radius is defined as the lateral radius which forms a cylinder containing 90\% of the energy deposition of a cascade in dense media.  Let $X_{\rm 0}$ be the electromagnetic radiation length in ice, and let $Z$ be the atomic number.  A common formula for the Moli\`{e}re radius, $R_{\rm M}$, is
-
-\begin{equation}
-R_{\rm M} = 0.0265 X_{\rm 0} (Z + 1.2)
-\end{equation}
-
-Another useful formula relates $X_{\rm 0}$ to $Z$ and the mass number $A$:
-
-\begin{equation}
-X_{\rm 0} = \SI{716.4}{\g\per\cm\squared} \frac{A}{Z(Z+1) \ln\left(\frac{287}{\sqrt{Z}}\right)}
-\end{equation}
-
-Using $Z = 8$ and $A = 16$ for oxygen: $X_{\rm 0} = 34.46$ g cm$^{-2}$. Converting $R_{\rm M}$ to units of cm, with a density of $0.917$ g cm$^{-3}$, gives $R_{\rm M} = 9.16$ cm.  The measured value for water is 9.77 cm.  Although it is tempting to compare $l$ to $R_{\rm M}$, these parameters have different definitions. Knowing that $l$ is related to $\omega_{\rm 0}$, $l$ may be estimated as $\lambda/2$ at the cutoff-frequency in ice.  At 3 GHz in ice, $\lambda/2 \approx 2.8$ cm, and at 1 GHz in ice, $\lambda/2 \approx 8.4$ cm.  \textit{Although the results are at the same order of magnitude as $R_{\rm M}$, it will be shown that there are three effects limiting the high-frequency spectrum of the radiation: $\omega_{\rm 0}$, $\omega_{\rm C}$, and the viewing angle.}  Thus, $l$ can be less than $R_{\rm M}$ and the radiation can still be limited to $\lesssim 1$ GHz.  
+In Section \ref{sec:fit:off}, the decay constant $l$ of the lateral component of the ICD is inferred from best-fit values of $\omega_{\rm 0}$.  The connection between the $l$-parameter and $\omega_0$ was described by JCH+AC \cite{10.1016/j.astropartphys.2017.03.008}.  Put simply, the ICD decays by a factor of $1/e$ a lateral distance $l$ from the cascade axis.  Note, however, that the $l$-parameter is not the Moli\`{e}re radius.  The Moli\`{e}re radius is the lateral radius which forms a cylinder containing 90\% of the energy deposition of the cascade.  For ice with a density of $0.917$ g cm$^{-3}$, one can estimate $R_{\rm M} \approx 9.2$ cm using standard formulas.  Although it is tempting to compare $l$ to $R_{\rm M}$, these parameters have different definitions. Knowing that $l$ is related to $\omega_{\rm 0}$, $l$ may be estimated as $\lambda/2$ in ice at the cutoff-frequency.  At 3 GHz in ice, $\lambda/2 \approx 2.8$ cm, and at 1 GHz in ice, $\lambda/2 \approx 8.4$ cm.  Although the results are at the same order of magnitude as $R_{\rm M}$, there are three effects limiting the high-frequency spectrum of the radiation: $\omega_{\rm 0}$, $\omega_{\rm C}$, and the viewing angle.  Thus, $l < R_{\rm M}$ is possible for a radiation spectrum limited to $\lesssim 1$ GHz.  
 
 \subsection{The Longitudinal Length Parameter}
 \label{sec:ff2}
 
-The next piece required in the assembly of the main electromagnetic field is the energy-dependence of the overall amplitude, and the energy dependence of the longitudinal length parameter, $a$, which is a part of $\vec{\mathcal{E}}$ in Equation \ref{eq:main} \cite{10.1103/physrevd.65.016003}.  What follows are two separate discussions, one for electromagnetic cascades, and one for hadronic cascades.  We share these calculations for convenience, but note that a variety of theoretical and experimental results on this topic are available \cite{saltzberg} \cite{ANDRINGA2011360} \cite{10.1088/1742-6596/1879/3/032089}.  
+The next piece required in the assembly of the main electromagnetic field is the energy-dependence of the overall amplitude, and the energy dependence of the longitudinal length parameter, $a$, which is a part of $\vec{\mathcal{E}}$ in Equation \ref{eq:main} \cite{10.1103/physrevd.65.016003}.  What follows are two separate discussions, one for electromagnetic cascades, and one for hadronic cascades.  Though we share these calculations for convenience, note that a variety of theoretical and experimental results on this topic are available \cite{saltzberg} \cite{ANDRINGA2011360} \cite{10.1088/1742-6596/1879/3/032089}.  
 
 \subsubsection{Electromagnetic Case}
 
-The number of charged particles versus distance $n(z')$ in an electromagnetic cascade taking place in a dense medium with initial cascade energy $E_C$, \textit{critical energy} $E_{crit}$, normalization parameter $n_{\rm 0}$, and \textit{age} $s$ is \cite{10.1016/j.astropartphys.2017.03.008}
+The number of charged particles versus distance in radiation lengths $n(z')$ in an electromagnetic cascade taking place in a dense medium with initial cascade energy $E_C$, \textit{critical energy} $E_{crit}$, normalization parameter $n_{\rm 0}$, and \textit{age} $s$ is \cite{10.1016/j.astropartphys.2017.03.008}
 
 \begin{equation}
 n(z') = \frac{n_0}{\sqrt{\ln(E_C/E_{crit})}} \exp \left \lbrace z'\left(1 - \frac{3}{2}\ln(s) \right) \right \rbrace
 \end{equation}
 
-The \textit{age} is given by
-
-\begin{equation}
-s = \frac{3z'}{z' + 2\ln(E_C/E_{crit})}
-\end{equation}
-
-The function $n(z')$ is known as the Greisen distribution.  In this case, the longitudinal distance variable $z'$ is in radiation lengths, and $n(z')$ is maximized at $z'_{\rm max} = \ln(x)$, where $x = E_{\rm C}/E_{\rm crit}$.  The calculation of the energy dependence of $a$ is broken into four steps: normalization of $n(z')$ to be a fraction of the maximum, $n_{\rm max}$, conversion of $n(z')$ to $n(s)$, determination of the width of $n(s)$, and conversion of the width in $s$ to a width in $z'$.
-
-Substituting $s = 1$ and $z' = \ln(x)$ into $n(z')$ yields $n_{\rm max}$:
-
-\begin{equation}
-n_{max} = \frac{n_0 x}{\sqrt{\ln(x)}} 
-\end{equation}
-
-Dividing $n(z')$ by $n_{max}$ yields
-
-\begin{equation}
-f(z') = x^{-1} \exp \left \lbrace z'\left(1 - \frac{3}{2}\ln(s) \right) \right \rbrace \label{eq:norm1}
-\end{equation}
-
-The function $f(z')$ is the normalized Greisen distribution.  Solving the age equation for $z'$:
-
-\begin{equation}
-z' = \frac{2s\ln(x)}{3-s} \label{eq:z}
-\end{equation}
-
-Since $f(z')$ is being studied near $s = 1$, we use $\ln(s) \approx s - 1$. Substituting back into Equation \ref{eq:norm1}:
-
-\begin{equation}
-f(s) = x^{-1} \exp \left \lbrace s \ln(x) \left( \frac{5 - 3 s}{3 - s} \right) \right \rbrace \label{eq:fs}
-\end{equation}
-
-To calculate the Gaussian width of $f(s)$, consider the following procedure.  Suppose there is a function $f(y)$ such that $\ln(f(y))$ is equal to a negatively oriented quadratic: $\ln(f(y)) = -(1/2) y^2/\sigma^2$.  Solving for $y$ yields $y_{\pm} = \pm \sqrt{-2 \ln f} \sigma$.  Assuming $f(y)$ behaves like a Gaussian near the global maximum, the width is $\Delta y = y_{+} - y_{-} = 2\sqrt{-2 \ln f} \sigma$ and $\ln f = -0.5$ precisely when it should: $y = \sigma$.  In a similar fashion, let $q = \ln(xf)/\ln(x)$ in Equation \ref{eq:fs}.  This leaves
-
-\begin{equation}
-q = \frac{5-3s}{3-s}s
-\end{equation}
-
-Letting $b = (q+5)/3$,
-
-\begin{align}
-0 &= q - b s + s^2 \\
-s_{\pm} &= \frac{b}{2} \pm \frac{1}{2} \sqrt{b^2 - 4 q} \\
-\Delta s &= s_{+} - s_{-} = \sqrt{b^2 - 4 q} \label{eq:ds}
-\end{align}
-
-The longitudinal length $\Delta z'$ is required.  The conversion of Equation \ref{eq:ds} can be made using Equation \ref{eq:z}.  The result is
-
-\begin{equation}
-\Delta z' = 2 \ln(x) \left( \frac{s_{+}}{3-s_{+}} - \frac{s_{-}}{3-s_{-}} \right)
-\end{equation}
-
-The expression for $\Delta z'$ may be simplified using the definitions of $s_{\pm}$, $q$, and $b$:
-
-\begin{equation}
-\Delta z' = \frac{1}{2} \ln(x) (q^2 -26 q +25)^{1/2}
-\end{equation}
-
-Noting that $q = 1 + \ln(f)/\ln(x)$, and that the quadratic factors:
-
-\begin{align}
-\Delta z' &= \frac{1}{2} \ln(x) (q-1)^{1/2}(q-25)^{1/2} \\
-\Delta z' &= \frac{1}{2} \ln(x) (\ln(f)/\ln(x))^{1/2}(q-25)^{1/2} \\
-\Delta z' &= \frac{1}{2}\sqrt{\ln(x)} \left( (\ln(f))^2 / \ln(x) - 24 \ln(f) \right)^{1/2}
-\end{align}
-
-The term involving $(\ln(f))^2$ is small, positive, and negligible compared to the second term in that square root.  Dropping it and setting $\Delta z' = a$ yields the main result:
+To find the energy-dependent width of the Greisen distribution, four steps are necessary: (1) normalization of $n(z')$ as a fraction of the maximum excess charge, (2) conversion of $n(z')$ to $n(s)$, (3) determination of the width of $n(s)$ by approximating the central portion as a Gaussian distribution, and (4) conversion of the width from $s$ units to radiation lengths $z'$, and then converting those results to a distance.  Define the ratio $R = n(a/2)/n_{\rm max}$.  The final result in radiation lengths is
 
 \begin{equation}
 \boxed{
-a = \sqrt{\ln(x)} \sqrt{-6\ln(f)}
+a = \sqrt{\ln(E_{\rm C}/E_{\rm crit})} \sqrt{-6\ln(R)}
 } \label{eq:main_1}
 \end{equation}
 
-Recall that $f<1$, so $\ln(f)<0$ and $a$ is real-valued.  Equation \ref{eq:main_1} is in radiation lengths.  In solid ice the density is $\rho_{ice} = 0.917$ g cm$^{-3}$, and the electromagnetic radiation length is $z_0 = 36.08$ g cm$^{-2}$ \cite{10.1016/j.astropartphys.2017.03.008}.  Converting to distance gives 
+Since $R<1$, $\ln(f)<0$ and $a$ is real-valued.  Equation \ref{eq:main_1} is in radiation lengths.  In solid ice the density is $\rho_{ice} = 0.917$ g cm$^{-3}$, and the electromagnetic radiation length is $z_0 = 36.08$ g cm$^{-2}$ \cite{10.1016/j.astropartphys.2017.03.008}.  Converting to distance gives 
 
 \begin{equation}
 \boxed{
-a = \frac{z_0}{\rho_{ice}}\sqrt{\ln(x)}\sqrt{-6 \ln(f)}
+a = \frac{z_0}{\rho_{ice}}\sqrt{\ln(E_{\rm C}/E_{\rm crit})} \sqrt{-6\ln(R)}
 }
 \end{equation}
 
-Note that $a \propto \sqrt{\ln(x)}$.  Since $n_{\rm max} \propto x/\sqrt{\ln(x)}$, the product $n_{\rm max} a$, is an approximation of the area under $n(z')$, and it goes as the energy $x = E_C/E_{\rm crit}$.  This was noted by RB \cite{10.1103/physrevd.65.016003}, who placed $n_{\rm max} a$ in the electromagnetic field normalization rather than $E_{\rm C}$.  Allowing $f$ to drop to 40\% of its peak value, and using $E_{\rm crit} \approx 10^8$ eV, gives $a \approx 4$ m for $E_{\rm C} = 10^{16}$ eV.  It will be shown in Section \ref{sec:fit} that 4 meters is accurate when compared to the result from MC simulation.
+Note that $a \propto \sqrt{\ln(E_{\rm C})}$, as shown by RB and others.  The product $n_{\rm max} a$ is proportional to the energy $E_C/E_{\rm crit}$.  For this reason RB took $n_{\rm max} a$ as the field normalization rather than $E_{\rm C}$ \cite{10.1103/physrevd.65.016003}.  As an example, let $R = 0.4$, and $E_{\rm crit} \approx 10^8$ eV, gives $a \approx 4$ meters for $E_{\rm C} = 10^{16}$ eV.  We show in Section \ref{sec:fit} that our fitted $a$-values are close to 4 meters when matched to semi-analytic parameterizations.
 
 \subsubsection{Hadronic Case}
 
@@ -257,53 +165,15 @@ The Gaisser-Hillas distribution describes hadronic cosmic-ray air showers, but h
 n(z') = n_{max} \left( \frac{z'-z_{0}}{z_{max} - z_{0}} \right)^{(z_{max} - z_{0})/\lambda} e^{ \frac{z_{max} - z'}{\lambda}}
 \end{equation}
 
-The variables are defined as follows: $n_{max}$ is the instantaneous maximum number of particles in the cascade, $z'$ is the longitudinal distance in radiation lengths, $z_0$ is the initial starting point, $\lambda$ is the interaction length, and $z'_{max}$ is the location of $n_{max}$.
-
-The calculation of the energy dependence of $a$ is broken into three steps: the normalization of $n(z')$ to be a fraction of $n_{max}$, approximation near $z_{max}$, and the longitudinal length determination based on the fraction of the normalized $n_{max}$.  Let $x = (z'-z_0)/\lambda)$, and $w = (z_{max} - z_0)/\lambda$.  The result is
-
-\begin{equation}
-f(z') = \left( \frac{x}{w} \right)^{w} \exp(w-x) \label{eq:norm}
-\end{equation}
-
-Taking the logarithm of both sides of Equation \ref{eq:norm} and then dividing both sides by $w$ gives:
-
-\begin{equation}
-\frac{\ln(f)}{w} = \ln(x/w) + 1 - \frac{x}{w}
-\end{equation}
-
-Near the shower maximum, $x/w \approx 1$.  Let $\epsilon = x/w$, and expand the right-hand side in a series about $\epsilon = 1$ to second order:
-
-\begin{equation}
-\frac{\ln(f)}{w} = -\frac{1}{2}(\epsilon - 1)^2
-\end{equation}
-
-Notice that the logarithm of the normalized distribution is again a negative quadratic, indicating Gaussian behavior near $z'_{\rm max}$.  Let $b = \ln(f)/w$, and solve the quadratic equation for $\epsilon$:
-
-\begin{equation}
-0 = \epsilon^2 -2\epsilon + 1 + 2b
-\end{equation}
-
-As with the electromagnetic case, let $\Delta \epsilon = \epsilon_{+} - \epsilon_{-}$, where $\epsilon_{+}$ and $\epsilon_{-}$ are the two solutions to the quadratic.  The result is
-
-\begin{equation}
-\Delta \epsilon = 2\sqrt{-2b}
-\end{equation}
-
-Assuming constant density, the starting point of the cascade $z_0$ is arbitrary, so $z_0$ may be set to zero.  Also, $\Delta x = w\Delta \epsilon$, so
-
-\begin{equation}
-\Delta x = \sqrt{w} \sqrt{-8 \ln(f)}
-\end{equation}
-
-If $z_0 = 0$, $w = z'_{\rm max}/\lambda$.  Finally, knowing that $\Delta z' = \lambda \Delta x$, the result becomes
+The variables are defined as follows: $n_{max}$ is the instantaneous maximum number of particles in the cascade, $z'$ is the longitudinal distance in radiation lengths, $z_0$ is the initial starting point, $\lambda$ is the interaction length, and $z'_{max}$ is the location of $n_{max}$.  Using the same steps as the electromagnetic case, we find
 
 \begin{equation}
 \boxed{
-a = \Delta z' = \sqrt{\lambda z'_{\rm max}} \sqrt{-8 \ln(f)}
+a = \sqrt{\lambda z'_{\rm max}} \sqrt{-8 \ln(R)}
 } \label{eq:main_2}
 \end{equation}
 
-As with the electromagnetic case, the longitudinal length parameter $a$ goes as $\sqrt{z_{max}}$ which produces similar lengths as the electromagnetic case when scaled by the appropriate interaction length and ice density.
+The $a$ parameter again goes as $\sqrt{z_{max}} \propto \sqrt{\ln(E_{\rm C})}$ which produces similar lengths as the electromagnetic case when scaled by the appropriate interaction length and ice density.
 
 \section{On-Cone Field Equations}
 \label{sec:onc}
@@ -857,88 +727,6 @@ Finally, a fully analytic model enhances the ability of IceCube-Gen2 radio to id
 We would like to thank our families for their support throughout the COVID-19 pandemic.  We could not have completed this work without their help.  We would also like to thank our colleagues for helpful discussions regarding analysis techniques.  In particular, we want to thank Profs. Steve Barwick, Dave Besson, and Christian Glaser for useful discussions.  Finally, we would like to thank the Whittier College Fellowships Committee, and specifically the Fletcher-Jones Fellowship Program for providing financial support for this work.  This work was partially funded by the Fletcher-Jones Summer Fellowship of 2020, Whittier College Fellowships program.
 
 \appendix
-
-\section{Details of the Derivation of the Form Factor}
-\label{app:f}
-
-To begin the evaluation of $\widetilde{F}$, the exponent $-i \vec{q} \cdot \vec{x}'$ must be expanded.  Let $nk \rightarrow k$, and assume that $k$ now refers to the scalar wavevector in the medium.
-
-\begin{equation}
--i \vec{q} \cdot \vec{x}' = -i k z'-i \frac{k}{r}\rho \rho' \cos(\phi')
-\end{equation}
-
-From the coordinate system, $\rho = r \sin(\theta)$, so
-
-\begin{equation}
--i \vec{q} \cdot \vec{x}' = -i k z'-i k \sin(\theta) \rho' \cos(\phi') \label{app:eq:exp}
-\end{equation}
-
-Then we have for $\widetilde{F}$:
-
-\begin{equation}
-\widetilde{F} = \int_{-\infty}^{\infty} \int_{0}^{\infty} \int_{0}^{2\pi} dz' \rho' d\rho' d\phi' \rho_0^2 \delta(z' - ct) e^{-i \vec{q} \cdot \vec{x}' - \sqrt{2\pi}\rho_0 \rho'}
-\end{equation}
-
-Evaluating the $z'$ integral and inserting Equation \ref{app:eq:exp}:
-
-\begin{equation}
-\widetilde{F} = \int_{0}^{\infty} \int_{0}^{2\pi} \rho' d\rho' d\phi' \rho_0^2 e^{-i k\sin(\theta) \rho' \cos(\phi') - \sqrt{2\pi} \rho_0 \rho') }
-\end{equation}
-
-Two physical parameters are necessary to compare wavelength to lateral ICD width.  First, let $\gamma$ be the projected scalar wavevector, and $\sigma$ be the ratio between $\gamma$ and the ICD exponential scale factor:
-
-\begin{align}
-\gamma &= k \sin(\theta) \\
-\sigma &= \gamma / (\sqrt{2\pi} \rho_0) \label{eq:sigma_1}
-\end{align}
-
-The integral becomes
-
-\begin{equation}
-\widetilde{F} = \rho_0^2 \int_{0}^{\infty} \int_{0}^{2\pi} \rho' d\rho' d\phi' e^{ -i\gamma \rho' \cos(\phi') - \frac{\gamma}{\sigma} \rho'}
-\end{equation}
-
-Rearranging to perform the $\phi'$-integral first:
-
-\begin{equation}
-\widetilde{F} = \rho_0^2 \int_0^{\infty} d\rho' \rho' e^{-\frac{\gamma}{\sigma}\rho'} \int_{0}^{2\pi} d\phi' e^{-i\gamma \rho' \cos(\phi')}
-\end{equation}
-
-The cylindrical symmetry of $f(\mathbf{x}')$ leaves one free to choose where $\phi' = 0$.  Thus, the azimuthal angle $\phi' \rightarrow \phi' - \pi$ may be rotated, changing $-\cos(\phi')$ to $\cos(\phi')$:
-
-\begin{equation}
-\widetilde{F} = \rho_0^2 \int_0^{\infty} d\rho' \rho' e^{-\frac{\gamma}{\sigma}\rho'} \int_{-\pi}^{\pi} d\phi' e^{i\gamma \rho' \cos(\phi')} \label{app:eq:F1}
-\end{equation}
-
-The $\phi'$-integral is now proportional to one representation of the 0-th order Bessel function of the first kind:
-
-\begin{equation}
-2\pi J_0 (\gamma \rho') = \int_{-\pi}^{\pi} d\phi' e^{i\gamma \rho' \cos(\phi')} \label{app:eq:bessel}
-\end{equation}
-
-Substituting Equation \ref{app:eq:bessel} into Equation \ref{app:eq:F1},
-
-\begin{equation}
-\widetilde{F} = 2\pi \rho_0^2 \int_0^{\infty} d\rho' \rho' e^{-\frac{\gamma}{\sigma}\rho'} J_0(\gamma \rho')
-\end{equation}
-
-Let $u' = \gamma \rho'$.  This substitution yields
-
-\begin{equation}
-F = \sigma^{-2} \int_0^{\infty} du' u' e^{-u'/\sigma} J_0(u')
-\end{equation}
-
-Let $p = \sigma^{-1}$.  The integral may be completed using Abramowitz and Stegun 11.3.5 \cite{AS}:
-
-\begin{align}
-\widetilde{F} &= p^2 \lim_{z \to \infty} g_{1,0} (z) \\
-\lim_{z \to \infty} g_{1,0} (z) &= p \lim_{z \to \infty} g_{0,0} (z) \\
-\widetilde{F} &= \frac{p^3}{1+p^2} \int_0^{\infty} e^{-pt} J_0(t) dt \\
-\widetilde{F} &= \frac{p^3}{(1+p^2)^{3/2}} \\
-\Aboxed{\widetilde{F} &= \frac{1}{(1+\sigma^2)^{3/2}}} \label{app:eq:F_main}
-\end{align}
-
-According to Equation \ref{app:eq:F_main}, the form factor is a low-pass filter with the cutoff-frequency $\omega_{\rm CF}$ introduced in Section \ref{sec:unit}: $\sigma = \omega/\omega_{\rm CF}$.
 
 \section{Details of the On-Cone Field Equation Derivation}
 \label{app:a}
