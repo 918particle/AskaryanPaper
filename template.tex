@@ -36,7 +36,7 @@ The field of Askaryan-class detectors requires this foundation for at least two 
 
 Askaryan models fall into three categories: full Monte Carlo (MC), semi-analytic, and fully analytic.  The original work by E. Zas, F. Halzen, and T. Stanev (ZHS) \cite{zhs} was a full MC model.  The properties of cascades with total energy $\leq 1$ PeV were examined.  A parameterization for the Askaryan field below 1 GHz was offered, attenuating modes above 1 GHz via a frequency-dependent form factor tied to the lateral cascade width.  The semi-analytic approach was introduced by J. Alvarez-Mu\~{n}iz \textit{et al} (ARVZ) \cite{10.1103/physrevd.84.103003}.  This approach accounts for fluctuations in the charge excess profile, and provides an analytic vector potential observed at the Cherenkov angle.  The vector potential at the Cherenkov angle is labeled the form factor, and observed fields are derived from the derivative of the vector potential once convolved with a charge excess profile from MC.  Recent work also accounts for differences in fit parameters from electromagnetic and hadronic cascades, and other interaction channels, while matching full MC simulations \cite{PhysRevD.101.083005}.
 
-Finally, fully analytic models of Askaryan radiation from first principles have been introduced.  J. Ralston and R. Buniy (RB) gave a fully analytic model valid for observations of cascades in the near and far-field, with the transition encapsulated by a parameter $\eta$ \cite{10.1103/physrevd.65.016003}.  The result was complex frequency-domain model.  Recently, a model and software implementation was given by J. C. Hanson and A. Connolly (JCH+AC) that built upon RB by providing an analytic form factor derived from GEANT4 simulations, and accounted for LPM elongation \cite{10.1016/j.astropartphys.2017.03.008}.  This work connected the location of poles in the complex frequency plane to $\eta$ and the form factor.  The poles combine to form a low-pass filter for the Askaryan radiation.  The JCH+AC results match the ZHS results while demonstrating the physical origins of model parameters.  The RB and JCH+AC results are given in the Fourier domain, but most UHE-$\nu$ searches (like template matching) have taken place in the time-domain.  \textit{The goal of this work is to present a fully analytic time-domain model valid for all viewing angles $\theta$ and $\eta < 1$, and to demonstrate that it matches semi-analytic models.}
+Finally, fully analytic models of Askaryan radiation from first principles have been introduced.  J. Ralston and R. Buniy (RB) gave a fully analytic model valid for observations of cascades in the near and far-field, with the transition encapsulated by a parameter $\eta$ \cite{10.1103/physrevd.65.016003}.  The result was complex frequency-domain model.  Recently, a model and software implementation was given by J. C. Hanson and A. Connolly (JCH+AC) that built upon RB by providing an analytic form factor derived from GEANT4 simulations, and accounted for LPM elongation \cite{10.1016/j.astropartphys.2017.03.008}.  This work connected the location of poles in the complex frequency plane to $\eta$ and the form factor.  The poles combine to form a low-pass filter for the Askaryan radiation.  The JCH+AC results match the ZHS results while demonstrating the physical origins of model parameters.  The RB and JCH+AC results are given in the Fourier domain, but most UHE-$\nu$ searches (like template matching) have taken place in the time-domain.  \textit{The goals of this work are to produce a fully analytic time-domain model accounting for complex poles, valid for all viewing angles $\theta$ and $\eta < 1$, and to demonstrate that it matches semi-analytic models.}
 
 In Section \ref{sec:unit}, the cascade geometry, units, and vocabulary are defined.  In Section \ref{sec:ff}, we describe how the JCH+AC form factor fits into the current model \cite{10.1016/j.astropartphys.2017.03.008}.  In Section \ref{sec:onc}, the analytic Askaryan field, observed at $\theta = \theta_{\rm C}$ (\textit{on-cone}), is presented.  In Section \ref{sec:ofc}, the analytic Askaryan field observed for $\theta \neq \theta_{\rm C}$ (\textit{off-cone}) is presented.  In Section \ref{sec:fit}, fully analytic fields are matched to semi-analytic fields generated with NuRadioMC \cite{10.1140/epjc/s10052-020-7612-8} at 10 PeV (electromagnetic cascades) and 100 PeV (hadronic cascades).  Though the LPM effect is activated in NuRadioMC, it has a negligible influence on the waveform comparison at these energies.  In Section \ref{sec:conc}, the results are summarized and potential applications of the fully analytic time-domain model are described.
 
@@ -55,7 +55,7 @@ In Fig. \ref{fig:geo} (c), an example excess charge profile $n(z')$ is shown wit
 
 The units of the electromagnetic field in the Fourier domain are V/m/Hz, often converted in the literature to V/m/MHz. To make the distance-dependence explicit, both sides of field equations are multiplied by $r$, as in $r\vec{E} = ... $, making the units V/Hz. Throughout this work, an overall field normalization constant $E_{\rm 0}$ is used.  $E_{\rm 0}$ may be linearly scaled with energy, as in other Askaryan models.  We show that the on-cone field amplitude is proportional to $E_{\rm 0}$ times a characteristic frequency-squared, so the units of $E_{\rm 0}$ are V/Hz$^2$.  For off-cone results, we show that the field amplitude is proportional to $E_{\rm 0}$ times a characteristic frequency divided by a characteristic pulse width, and the units of $E_{\rm 0}$ remain V/Hz$^2$.
 
-In Section \ref{sec:ff2}, we review briefly the energy-dependence of the longitudinal length $a$ in both the electromagnetic and hadronic cases.  For the Greisen distribution with critical energy $E_{\rm crit}$, it can be shown that if $n_{\rm max} = n(z_{\rm max})$, where $z_{\rm max} = \ln{(E_{\rm C}/E_{\rm crit})}$, then $n_{\rm max} a \sim E_{\rm C}/E_{\rm crit}$.  Thus, the area under the curve $n(z')$ scales with $E_{\rm C}$.  RB demonstrated that the Askaryan radiation amplitude is proportional to $n_{\rm max} a$ and therefore $E_{\rm C}$.  The cascade develops over a length $\approx a$, but the radiation is coherent over a length $\Delta z'_{\rm coh}$ for which the displacement is constant to first order relative to a wavelength.  The $\eta$ parameter is the square of the ratio of $a$ to $\Delta z'_{\rm coh}$:
+In Section \ref{sec:ff2}, we review briefly the energy-dependence of the longitudinal length $a$ in both the electromagnetic and hadronic cases.  For the Greisen distribution with critical energy $E_{\rm crit}$, it can be shown that if $n_{\rm max} = n(z_{\rm max})$, where $z_{\rm max} = \ln{(E_{\rm C}/E_{\rm crit})}$, then $n_{\rm max} a \sim E_{\rm C}/E_{\rm crit}$.  Thus, the area under the curve $n(z')$ scales with the total cascade energy $E_{\rm C}$.  RB demonstrated that the Askaryan radiation amplitude is proportional to $n_{\rm max} a$ and therefore $E_{\rm C}$.  The cascade develops over a length $\approx a$, but the radiation is coherent over a length $\Delta z'_{\rm coh}$ for which the displacement is constant to first order relative to a wavelength.  The $\eta$ parameter is the square of the ratio of $a$ to $\Delta z'_{\rm coh}$:
 
 \begin{equation}
 \eta = \left( \frac{a}{\Delta z'_{\rm coh}} \right)^2 = \frac{k}{r} (a\sin\theta)^2
@@ -92,7 +92,7 @@ To arrive at the main electromagnetic field in the time-domain, the individual p
 \subsection{The Form Factor}
 \label{sec:ff1}
 
-As presented in Section \ref{sec:unit} the form factor is the 3D Fourier transform of the ICD $f(z',\vec{\rho}')$, with $\vec{q} = nk(1, \vec{\rho}/R)$:
+The form factor is the 3D Fourier transform of the ICD $f(z',\vec{\rho}')$, with $\vec{q} = nk(1, \vec{\rho}/R)$ \cite{10.1103/physrevd.65.016003}:
 
 \begin{equation}
 F(\vec{q}) = \int d^3 x' f(z',\rho') e^{-i \vec{q} \cdot \vec{x}'}
@@ -102,17 +102,15 @@ The goal is to evaluate $\widetilde{F}$ in the Fourier domain for an ICD definit
 
 \begin{equation}
 \boxed{
-\widetilde{F} = \frac{1}{(1+\sigma^2)^{3/2}}
+\widetilde{F} = \frac{1}{(1+(\omega/\omega_{\rm CF})^2)^{3/2}}
 } \label{eq:F_main}
 \end{equation}
 
-The form factor acts as a low-pass filter with the cutoff-frequency $\omega_{\rm CF}$ introduced in Section \ref{sec:unit}: $\sigma = \omega/\omega_{\rm CF}$:
+The form factor acts as a low-pass filter with the cutoff-frequency $\omega_{\rm CF}$:
 
-\begin{align}
-\widetilde{F} &= \frac{1}{(1+\sigma^2)^{3/2}} \approx \frac{1}{1+\frac{3}{2} \sigma^2} \\
-\widetilde{F} &\approx \frac{1}{(1+i \sqrt{3/2}\sigma)(1-i \sqrt{3/2} \sigma)} \\
-\widetilde{F} &\approx \frac{\omega_{\rm 0}^2}{(\omega+i\omega_{\rm 0})(\omega-i\omega_{\rm 0})} \label{eq:two_pole}
-\end{align}
+\begin{equation}
+\widetilde{F} \approx \frac{\omega_{\rm 0}^2}{(\omega+i\omega_{\rm 0})(\omega-i\omega_{\rm 0})} \label{eq:two_pole}
+\end{equation}
 
 The definition $\omega_{\rm 0} = \sqrt{2/3} ~ \omega_{\rm CF}$ has been used in the final step.  Equation \ref{eq:two_pole} matches the original ZHS parameterization (see Equation 20 of \cite{zhs}).
 
